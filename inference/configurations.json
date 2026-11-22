@@ -1,0 +1,117 @@
+{
+  "classic-cv": {
+    "config": {
+      "kind": "cv",
+      "scale": 1,
+      "null": 3
+    },
+    "validation_result": "paper-public-association-v14/baselines/classic-cv-development.json",
+    "validation_result_sha256": "79966557572f6732289f3259d47d1ba725c30999f94f251d3cc53d5239bccefb"
+  },
+  "classic-relative_history": {
+    "config": {
+      "kind": "relative_history",
+      "weights": [
+        0.1,
+        0.1,
+        1
+      ],
+      "scale": 0.3,
+      "null": 9
+    },
+    "validation_result": "paper-public-association-v14/baselines/classic-relative_history-development.json",
+    "validation_result_sha256": "510a2e0a17bd1e4482b1ad15aa7dd66d6adcb3213d6aceae142f923f99befcee"
+  },
+  "classic-kbest": {
+    "config": {
+      "kind": "kbest",
+      "structure": 1,
+      "null": 3,
+      "rerank": 1
+    },
+    "validation_result": "paper-public-association-v14/baselines/classic-kbest-development.json",
+    "validation_result_sha256": "7b09c8c5d033f4dd58188e064435dc3d9e882fb64e88ef18964b86a6e0985dc3"
+  },
+  "classic-ipfp": {
+    "config": {
+      "kind": "ipfp",
+      "scale": 3,
+      "unary": 1,
+      "null": 0.1
+    },
+    "validation_result": "paper-public-association-v14/baselines/classic-ipfp-development.json",
+    "validation_result_sha256": "2a5b6fd2eb6c0d9b64bb489e863cf13447f4925a963478eb1b1d0c66907a1c9c"
+  },
+  "bcpd-author": {
+    "config": {
+      "mode": "srn",
+      "beta": 0.5,
+      "lam": 20.0,
+      "outlier": 0.3,
+      "gamma": 0.1,
+      "symmetric": true
+    },
+    "validation_result": "paper-public-association-v16/bcpd/bcpd-author-development.json",
+    "validation_result_sha256": "07579496411e7933106b90d2e7214e1b27917ad4c6c2154e8a033e16bbfe05a5"
+  },
+  "histboost-11": {
+    "config": {},
+    "validation_result": "paper-public-association-v14/baselines/histboost-11-development.json",
+    "validation_result_sha256": "7b10da8d3568537f1b326f880acdf338e33f7603e5f59bbbd711046797216784"
+  },
+  "temporal_graph-11": {
+    "config": {},
+    "validation_result": "paper-public-association-v14/baselines/temporal_graph-11-development.json",
+    "validation_result_sha256": "c96102aefa9d07ef1d219c2f53ec6a53f611718d415eebb65ebd164d35cc2954"
+  },
+  "superglue-11": {
+    "config": {},
+    "validation_result": "paper-public-association-v14/baselines/superglue-11-development.json",
+    "validation_result_sha256": "4783d2f4abcecfc48203cb78404e2200fd8e6091cd1d77adbb92026616fb86af"
+  },
+  "pca_gm-11": {
+    "config": {},
+    "validation_result": "paper-public-association-v16/baselines/pca_gm-11-development.json",
+    "validation_result_sha256": "936d898ee8e71711c40892fb008fbff91c728a3f05957ae6b117e34c56266cbf"
+  },
+  "opgm_motion_tau0.2-11": {
+    "config": {
+      "tau": 0.2,
+      "training_rho": 0.4,
+      "lambda_bias": 0.4
+    },
+    "validation_result": "paper-public-association-v14/opgm/opgm_motion_tau0.2-11-development.json",
+    "validation_result_sha256": "eaac9854a8aa5649b6edb4501a385af29a4bdc08b2e9b67ffff939515a4d9489"
+  },
+  "coordinate-group_fixed-11": {
+    "config": {},
+    "validation_result": "paper-public-association-v21/runs/group_fixed-11/point_twix_l1-11-development.json",
+    "validation_result_sha256": "a30783fbcae93a49c2e9fd17c8acb12c5f7a9bcbdf1038ec636752233145ac1d"
+  },
+  "physical_prediction_only-11": {
+    "config": {
+      "physical": true,
+      "attention": false,
+      "residual": false
+    },
+    "validation_result": "paper-public-association-v14/v10/physical_prediction_only-11-development.json",
+    "validation_result_sha256": "b1444a57c748fc441572834579ffc29912f329ef710cf25b55162cab72a1c3cf"
+  },
+  "global_joint_full-11": {
+    "config": {
+      "joint": true,
+      "full_covariance": true,
+      "global_parameters": true
+    },
+    "validation_result": "paper-public-association-v17/global_joint_full-11-development.json",
+    "validation_result_sha256": "c28005259fe555dacbc383949b59836e6c19031852e6d954dea3bcf8522b4b18"
+  },
+  "joint_full-11": {
+    "config": {
+      "joint": true,
+      "full_covariance": true
+    },
+    "validation_result": "paper-public-association-v17/joint_full-11-development.json",
+    "validation_result_sha256": "b86ee4bfb4c3a9b52dfb2e4053c008f9d43781bf4861b1cbce3e2d6e8153c0d0"
+  }
+}

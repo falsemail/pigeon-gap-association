@@ -1,0 +1,122 @@
+{
+  "runtime/baselines.py": {
+    "original": "paper-dense-study/baselines.py",
+    "source_sha256": "263538158534f4cc9c970eca941b03c053c50a8da58a990347f915562da524f5",
+    "copy": "complete source"
+  },
+  "runtime/legacy_features.py": {
+    "original": "paper-dense-study/legacy_features.py",
+    "source_sha256": "5d5ada6d2db0670747e1da634248f1e17492920f56e3e7c2a115b64b892f22eb",
+    "copy": "complete source"
+  },
+  "runtime/legacy_geometry.py": {
+    "original": "paper-dense-study/legacy_geometry.py",
+    "source_sha256": "cf9a447083100407794bd3de0c3d5d5a45c3e6197ed5335dea7591a54eaf5b94",
+    "copy": "complete source"
+  },
+  "runtime/core.py": {
+    "original": "paper-dense-study/core.py",
+    "source_sha256": "c990c71b981d495c33564e3c14c9506a0906d262be765533d8109f5b67bcc171",
+    "symbols": [
+      "DT",
+      "SCALE",
+      "limit",
+      "inherited",
+      "structure_features",
+      "pack_observed",
+      "geometry_sample",
+      "build_sample",
+      "label_sample",
+      "score_assignment"
+    ]
+  },
+  "runtime/data_protocol.py": {
+    "original": "paper-public-association-v3/data_protocol.py",
+    "source_sha256": "ea7e71a27626a7e9e72dad98ce53825bcd86e5ab3af45332ff6057460b1b3557",
+    "symbols": [
+      "descriptors",
+      "features",
+      "project2d"
+    ]
+  },
+  "runtime/episodes.py": {
+    "original": "paper-public-association-v3/episodes.py",
+    "source_sha256": "c5fb763d8ef57727befb31982b4f4864acc799ba4045add333cc86b601f606c0",
+    "symbols": [
+      "episode"
+    ]
+  },
+  "runtime/classical_public.py": {
+    "original": "paper-public-association-v3/classical_public.py",
+    "source_sha256": "28bd18b230d1e9f1516b8568c6a1f8d8de4a71dfd52f48ee1cffc580f1ffea96",
+    "symbols": [
+      "partial",
+      "cost",
+      "predict"
+    ]
+  },
+  "runtime/temporal_models.py": {
+    "original": "paper-public-association-v3/temporal_models.py",
+    "source_sha256": "5ca3e481a6a7be26de1334f6623647fe13990883a966dd962fdcdb408a5bb191",
+    "copy": "complete source"
+  },
+  "runtime/train_pca.py": {
+    "original": "paper-public-association-v3/train_pca.py",
+    "source_sha256": "8ecc6353d44a017562d44a60271322ef8b08d4104657622dbe61376153353f57",
+    "symbols": [
+      "PCAMatcher"
+    ]
+  },
+  "runtime/lean_inference.py": {
+    "original": "paper-public-association-v12/lean_inference.py",
+    "source_sha256": "6ae8cc2a62a82e5710cf8ca03a0083bfc890c07bdee0f8941b279414c978d22d",
+    "symbols": [
+      "prepare_observations",
+      "tensor_inputs"
+    ]
+  },
+  "runtime/twix_adapter.py": {
+    "original": "paper-public-association-v15/twix_adapter.py",
+    "source_sha256": "32c41a43fecbf6c5d239c34f9e962dedcf317f516baa1bc7900b8ba6754a88af",
+    "symbols": [
+      "NormPoints",
+      "PointTWiX",
+      "trajectory_input"
+    ]
+  },
+  "runtime/coordinate_adapter.py": {
+    "original": "paper-public-association-v21/coordinate_adapter.py",
+    "source_sha256": "ba76f5043eb5fddc98168af7d6a4954094fd5786801b94b9a27a86baf324b8a8",
+    "symbols": [
+      "MODES",
+      "center_observed_group",
+      "FixedPhysicalScale",
+      "CoordinateTWiX"
+    ]
+  },
+  "runtime/bcpd_baseline.py": {
+    "original": "paper-public-association-v10/bcpd_baseline.py",
+    "source_sha256": "184824f83d9ad08d87b60fa867162e5ef576b8d6d6db9159f1d43f85d669d820",
+    "symbols": [
+      "core",
+      "coords",
+      "predict_cost"
+    ]
+  },
+  "runtime/opgm_adapter.py": {
+    "original": "paper-public-association-v14/opgm_adapter.py",
+    "source_sha256": "b0d2f04856b50fd4df1757abbfa015ca94911fdc7c90585959a5d15d7d77e5f9",
+    "symbols": [
+      "author_module",
+      "MotionOPGM"
+    ]
+  },
+  "runtime/benchmark.py": {
+    "original": "paper-public-association-v20/benchmark.py",
+    "source_sha256": "fb1f70fc9388f874044b02efbb1bf67089f65bcf494fe53d80d8f726a712d1f7",
+    "symbols": [
+      "OBSERVED_KEYS",
+      "observed"
+    ]
+  }
+}

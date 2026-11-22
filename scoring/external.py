@@ -6,6 +6,8 @@ import itertools
 import json
 import math
 from collections import defaultdict
+from functools import reduce
+from operator import add
 from pathlib import Path
 import random
 from statistics import mean
@@ -116,7 +118,9 @@ def aggregate(registry, scores):
                                 scores[source, gap, method, rec][1][0]) for rec in record_ids]
                 rng = random.Random(ci["seed"])
                 n = len(diffs)
-                bootstrap = sorted(sum(rng.choices(diffs, k=n)) / n for _ in range(ci["draws"]))
+                # The archived intervals summed each bootstrap draw from left to right.
+                bootstrap = sorted(reduce(add, rng.choices(diffs, k=n), 0.0) / n
+                                   for _ in range(ci["draws"]))
                 # Order statistics used in the frozen script, with zero-based indexing.
                 paired.append(dict(source=source, gap_s=gap, baseline=method, records=n,
                                    delta_pp=mean(diffs), low_pp=bootstrap[249],
@@ -141,8 +145,15 @@ def main(output):
     registry = json.loads(regfile.read_text(encoding="utf-8"))
     scores, fallbacks, ncases = recording_scores(registry, hashlib.sha256(regfile.read_bytes()).hexdigest())
     rows, paired = aggregate(registry, scores)
-    check_reference(rows, "external-results.csv", {"source", "method"})
-    check_reference(paired, "paired-intervals.csv", {"source", "baseline"})
+    emit_external_tables(registry, rows, paired, output, verify=True)
+    print(f"Passed: {ncases} cases, {len(rows)} summary rows, {len(paired)} paired intervals; "
+          f"{fallbacks['bcpd-author']} registration fallbacks. Outputs: {output.resolve()}")
+
+
+def emit_external_tables(registry, rows, paired, output, verify=False):
+    if verify:
+        check_reference(rows, "external-results.csv", {"source", "method"})
+        check_reference(paired, "paired-intervals.csv", {"source", "baseline"})
     names = {row["configuration"]: row["display_name"] for row in read_csv(EVIDENCE / "frozen-methods.csv")}
     check(list(names) == list(registry["methods"]), "Unexpected method order")
     by_key = {(r["method"], r["source"], r["gap_s"]): r for r in rows}
@@ -165,8 +176,6 @@ def main(output):
     for filename, content in (("table3-retention.csv", table3), ("table4-selection.csv", table4),
                               ("external-results.csv", rows), ("paired-intervals.csv", paired)):
         write_csv(output / filename, content)
-    print(f"Passed: {ncases} cases, {len(by_key)} summary rows, {len(paired)} paired intervals; "
-          f"{fallbacks['bcpd-author']} registration fallbacks. Outputs: {output.resolve()}")
 
 
 if __name__ == "__main__":

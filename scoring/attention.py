@@ -18,6 +18,10 @@ def compare():
     frozen = (EVIDENCE / "frozen-registry.json").read_bytes()
     registry = json.loads(frozen)
     records, _, _ = recording_scores(registry, hashlib.sha256(frozen).hexdigest())
+    yield from compare_records(registry, records)
+
+
+def compare_records(registry, records):
     setup = registry["descriptive_intervals"]
     for source in SOURCES:
         ids = sorted(rec for s, gap, method, rec in records
@@ -33,12 +37,16 @@ def compare():
                sum(d > 0 for d in differences), sum(d == 0 for d in differences))
 
 
+def write_contrasts(path, contrasts):
+    with path.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.writer(stream)
+        writer.writerow(("source", "recordings", "mixture_minus_attention_pp",
+                         "lower_pp", "upper_pp", "mixture_ahead", "ties"))
+        writer.writerows(contrasts)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
-    with args.output.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.writer(stream)
-        writer.writerow(("source", "recordings", "mixture_minus_attention_pp",
-                         "lower_pp", "upper_pp", "mixture_ahead", "ties"))
-        writer.writerows(compare())
+    write_contrasts(args.output, compare())

@@ -1,0 +1,13 @@
+diff --git a/register/corresp.c b/register/corresp.c
+index a610970..f59aa9f 100644
+--- a/register/corresp.c
++++ b/register/corresp.c
+@@ -213,7 +213,7 @@ double *corresp_compute(
+         for(d=0;d<D;d++) xs[d+D*m]+=p[i]*X[d+D*n];
+       }
+       /* e reports the best source even when c marks it as an outlier. */
+-      if(fpP){for(i=0;i<ct;i++)if(p[i]>1.0/M){m=l[i];fprintf(fpP,"%d\t%d\t%.17g\n",n+1,m+1,p[i]);}}
++      if(fpP){for(i=0;i<ct;i++)if(p[i]>0.0){m=l[i];fprintf(fpP,"%d\t%d\t%.17g\n",n+1,m+1,p[i]);}}
+       if(fpe){fprintf(fpe,"%d\t%d\t%.17g\n",n+1,l[mmax]+1,p[mmax]);}
+       if(fpc){fprintf(fpc,"%d\t%d\n",n+1,p[mmax]>c?1:0);}
+     }
