@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use the reproduction package, cite the accompanying manuscript and the underlying public trajectory datasets."
+title: "Reproducible code package for identity association across observation gaps"
+version: 1.1.0
+date-released: 2026-11-22
+authors:
+  - family-names: Fei
+    given-names: Simiao
+  - family-names: Wang
+    given-names: Yue
+  - family-names: Hao
+    given-names: Xueer
+  - family-names: Li
+    given-names: Huicun
+keywords:
+  - multi-target tracking
+  - trajectory association
+  - identity retention
+  - reproducible research
+repository-code: "https://github.com/falsemail/pigeon-gap-association"
