@@ -1,0 +1,10 @@
+Source,Method,Retention (%),Precision (%),Count MAE
+Huang,Relative-history geometry,23.29,17.28,1.20
+Huang,Context-conditioned kinematic mixture,22.04,17.68,1.65
+Huang,Attention and transport matcher,24.41,19.46,1.47
+D1,Relative-history geometry,28.31,21.29,0.89
+D1,Context-conditioned kinematic mixture,26.20,23.27,1.37
+D1,Attention and transport matcher,29.46,24.38,1.16
+D2,Relative-history geometry,18.05,13.36,1.12
+D2,Context-conditioned kinematic mixture,16.96,14.69,1.68
+D2,Attention and transport matcher,18.21,14.80,1.46

@@ -1,0 +1,15 @@
+Method,Huang/15,Huang/20,D1/15,D1/20,D2/15,D2/20
+Constant velocity,17.57,15.17,20.75,18.72,14.02,14.12
+Relative-history geometry,24.15,23.29,30.17,28.31,18.33,18.05
+K-best geometric association,22.05,22.36,27.21,25.11,17.58,16.69
+Integer projected fixed-point matching,23.46,18.44,27.25,27.05,16.84,17.22
+Bayesian coherent point drift,21.06,19.62,24.92,24.49,16.17,16.18
+Histogram gradient boosting,25.09,20.14,29.90,28.26,18.55,18.08
+Temporal message passing,23.90,20.91,29.05,28.11,18.80,16.94
+Attention and transport matcher,24.56,24.41,30.52,29.46,19.33,18.21
+Combinatorial graph embedding,22.21,22.28,28.72,27.54,18.69,17.67
+Optimal partial graph matching,23.28,20.14,28.96,28.48,18.97,16.59
+Group-centred coordinate transformer,21.84,23.11,30.69,28.15,18.50,16.91
+Physical prediction mixture,25.90,23.47,29.51,26.89,18.78,16.99
+Global kinematic mixture,25.20,21.43,25.84,24.48,16.97,16.45
+Context-conditioned kinematic mixture,27.44,22.04,30.34,26.20,18.20,16.96
