@@ -1,0 +1,17 @@
+[
+  {
+    "path": "paper-public-coordinated-reserve/trajectoriesD1.zip",
+    "sha256": "7b7f6636c0d8eba49dfb788a86da841216018cddf579984d974682e8affe7d2d",
+    "access": "https://coordinatedflock.elte.hu/data/trajectoriesD1.zip"
+  },
+  {
+    "path": "paper-public-coordinated-reserve/trajectoriesD2.zip",
+    "sha256": "715a3b91d31c0678be8ab5170ce824d25480ce061c1665b1f71733bc52384f34",
+    "access": "https://coordinatedflock.elte.hu/data/trajectoriesD2.zip"
+  },
+  {
+    "path": "paper-public-extra-validation/pigeon_homing_public_trials_v1.0.0.zip",
+    "sha256": "756eed718ad13c14233e60b19009ce0916f183eb540b1262ba030ebc25a0ab03",
+    "access": "https://doi.org/10.5281/zenodo.21092705"
+  }
+]

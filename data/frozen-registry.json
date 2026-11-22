@@ -1,0 +1,2296 @@
+{
+  "created_utc": "2026-11-03T14:19:33.598352+00:00",
+  "descriptive_intervals": {
+    "comparators": [
+      "classic-relative_history",
+      "physical_prediction_only-11"
+    ],
+    "draws": 10000,
+    "seed": 2026102909,
+    "unit": "paired record means per source and gap; repeated subjects limit exchangeability"
+  },
+  "methods": {
+    "classic-cv": {
+      "spec": {
+        "name": "classic-cv",
+        "family": "classical",
+        "result": "paper-public-association-v14/baselines/classic-cv-development.json",
+        "checkpoint": null,
+        "devices": [
+          "cpu"
+        ]
+      },
+      "device": "cpu",
+      "threshold": 3.0,
+      "families": [
+        "constant velocity"
+      ],
+      "validation_f1": 0.17667857205240448
+    },
+    "classic-relative_history": {
+      "spec": {
+        "name": "classic-relative_history",
+        "family": "classical",
+        "result": "paper-public-association-v14/baselines/classic-relative_history-development.json",
+        "checkpoint": null,
+        "devices": [
+          "cpu"
+        ]
+      },
+      "device": "cpu",
+      "threshold": 9.0,
+      "families": [
+        "relative history"
+      ],
+      "validation_f1": 0.20462438284613294
+    },
+    "classic-kbest": {
+      "spec": {
+        "name": "classic-kbest",
+        "family": "classical",
+        "result": "paper-public-association-v14/baselines/classic-kbest-development.json",
+        "checkpoint": null,
+        "devices": [
+          "cpu"
+        ]
+      },
+      "device": "cpu",
+      "threshold": 3.0,
+      "families": [
+        "geometric and hypothesis enumeration"
+      ],
+      "validation_f1": 0.21812069063320771
+    },
+    "classic-ipfp": {
+      "spec": {
+        "name": "classic-ipfp",
+        "family": "classical",
+        "result": "paper-public-association-v14/baselines/classic-ipfp-development.json",
+        "checkpoint": null,
+        "devices": [
+          "cpu"
+        ]
+      },
+      "device": "cpu",
+      "threshold": 0.1,
+      "families": [
+        "non-neural graph"
+      ],
+      "validation_f1": 0.19819505082026975
+    },
+    "bcpd-author": {
+      "spec": {
+        "name": "bcpd-author",
+        "family": "bcpd",
+        "result": "paper-public-association-v16/bcpd/bcpd-author-development.json",
+        "checkpoint": null,
+        "devices": [
+          "cpu"
+        ]
+      },
+      "device": "cpu",
+      "threshold": 30.0,
+      "families": [
+        "point registration"
+      ],
+      "validation_f1": 0.1975957528992267
+    },
+    "histboost-11": {
+      "spec": {
+        "name": "histboost-11",
+        "family": "tree",
+        "result": "paper-public-association-v14/baselines/histboost-11-development.json",
+        "checkpoint": "paper-public-association-v14/baselines/histboost-11.pkl",
+        "devices": [
+          "cpu"
+        ]
+      },
+      "device": "cpu",
+      "threshold": -1.0,
+      "families": [
+        "trees"
+      ],
+      "validation_f1": 0.24291076853044744
+    },
+    "temporal_graph-11": {
+      "spec": {
+        "name": "temporal_graph-11",
+        "family": "neural",
+        "result": "paper-public-association-v14/baselines/temporal_graph-11-development.json",
+        "checkpoint": "paper-public-association-v14/baselines/temporal_graph-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -1.0,
+      "families": [
+        "temporal message passing"
+      ],
+      "validation_f1": 0.2534675726639742
+    },
+    "superglue-11": {
+      "spec": {
+        "name": "superglue-11",
+        "family": "neural",
+        "result": "paper-public-association-v14/baselines/superglue-11-development.json",
+        "checkpoint": "paper-public-association-v14/baselines/superglue-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -2.0,
+      "families": [
+        "attention transport"
+      ],
+      "validation_f1": 0.2396719262461522
+    },
+    "pca_gm-11": {
+      "spec": {
+        "name": "pca_gm-11",
+        "family": "neural",
+        "result": "paper-public-association-v16/baselines/pca_gm-11-development.json",
+        "checkpoint": "paper-public-association-v16/baselines/pca_gm-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -2.0,
+      "families": [
+        "graph embedding"
+      ],
+      "validation_f1": 0.23403955439175614
+    },
+    "opgm_motion_tau0.2-11": {
+      "spec": {
+        "name": "opgm_motion_tau0.2-11",
+        "family": "opgm",
+        "result": "paper-public-association-v14/opgm/opgm_motion_tau0.2-11-development.json",
+        "checkpoint": "paper-public-association-v14/opgm/opgm_motion_tau0.2-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": 0.5,
+      "families": [
+        "optimal partial graph matching"
+      ],
+      "validation_f1": 0.22376740419305943
+    },
+    "coordinate-group_fixed-11": {
+      "spec": {
+        "name": "coordinate-group_fixed-11",
+        "family": "twix",
+        "layers": 1,
+        "mode": "group_fixed",
+        "result": "paper-public-association-v21/runs/group_fixed-11/point_twix_l1-11-development.json",
+        "checkpoint": "paper-public-association-v21/runs/group_fixed-11/point_twix_l1-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -0.9,
+      "families": [
+        "coordinate transformer"
+      ],
+      "validation_f1": 0.26633486947551394
+    },
+    "physical_prediction_only-11": {
+      "spec": {
+        "name": "physical_prediction_only-11",
+        "family": "physical",
+        "result": "paper-public-association-v14/v10/physical_prediction_only-11-development.json",
+        "checkpoint": "paper-public-association-v14/v10/models/physical_prediction_only-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -3.0,
+      "families": [
+        "earlier neural motion density"
+      ],
+      "validation_f1": 0.26992030442924114
+    },
+    "global_joint_full-11": {
+      "spec": {
+        "name": "global_joint_full-11",
+        "family": "kinematic",
+        "result": "paper-public-association-v17/global_joint_full-11-development.json",
+        "checkpoint": "paper-public-association-v17/models/global_joint_full-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -6.0,
+      "families": [
+        "global statistical density"
+      ],
+      "validation_f1": 0.2243220094397557
+    },
+    "joint_full-11": {
+      "spec": {
+        "name": "joint_full-11",
+        "family": "kinematic",
+        "result": "paper-public-association-v17/joint_full-11-development.json",
+        "checkpoint": "paper-public-association-v17/models/joint_full-11.pt",
+        "devices": [
+          "cpu",
+          "cuda"
+        ]
+      },
+      "device": "cuda",
+      "threshold": -3.0,
+      "families": [
+        "validation-selected candidate"
+      ],
+      "validation_f1": 0.272621953255844
+    }
+  },
+  "family_pools": {
+    "constant velocity": [
+      "classic-cv"
+    ],
+    "relative history": [
+      "classic-relative_history"
+    ],
+    "geometric and hypothesis enumeration": [
+      "classic-cv",
+      "classic-multi_model",
+      "classic-geometry",
+      "classic-structure",
+      "classic-kbest",
+      "classic-relative",
+      "classic-relative_endpoint",
+      "classic-relative_history",
+      "classic-axis_rank"
+    ],
+    "non-neural graph": [
+      "classic-ipfp",
+      "classic-rrwm"
+    ],
+    "point registration": [
+      "classic-cpd_rigid",
+      "classic-cpd_nonrigid",
+      "bcpd-author",
+      "bcpd-robust-init"
+    ],
+    "trees": [
+      "histboost-11",
+      "extra_trees-11"
+    ],
+    "temporal message passing": [
+      "temporal_graph-11"
+    ],
+    "attention transport": [
+      "superglue-11"
+    ],
+    "graph embedding": [
+      "pca_gm-11",
+      "ngm-11"
+    ],
+    "optimal partial graph matching": [
+      "opgm_motion_tau0.05-11",
+      "opgm_motion_tau0.2-11"
+    ],
+    "coordinate transformer": [
+      "point_twix_l1-11",
+      "point_twix_l4-11",
+      "coordinate-group_fixed-11",
+      "coordinate-world_fixed-11",
+      "coordinate-group_pair-11",
+      "optimization-layers1_lr0.001-11",
+      "optimization-layers4_lr0.0001-11"
+    ],
+    "earlier neural motion density": [
+      "signed_prediction_only-11",
+      "physical_prediction_only-11"
+    ],
+    "global statistical density": [
+      "global_joint_full-11"
+    ],
+    "validation-selected candidate": [
+      "bcpd-author",
+      "bcpd-robust-init",
+      "classic-axis_rank",
+      "classic-cpd_nonrigid",
+      "classic-cpd_rigid",
+      "classic-cv",
+      "classic-geometry",
+      "classic-ipfp",
+      "classic-kbest",
+      "classic-multi_model",
+      "classic-relative",
+      "classic-relative_endpoint",
+      "classic-relative_history",
+      "classic-rrwm",
+      "classic-structure",
+      "coordinate-group_fixed-11",
+      "coordinate-group_pair-11",
+      "coordinate-world_fixed-11",
+      "extra_trees-11",
+      "global_joint_full-11",
+      "histboost-11",
+      "joint_diagonal-11",
+      "joint_full-11",
+      "ngm-11",
+      "opgm_motion_tau0.05-11",
+      "opgm_motion_tau0.2-11",
+      "optimization-layers1_lr0.001-11",
+      "optimization-layers4_lr0.0001-11",
+      "pca_gm-11",
+      "physical_prediction_only-11",
+      "point_twix_l1-11",
+      "point_twix_l4-11",
+      "position_diagonal-11",
+      "position_full-11",
+      "signed_prediction_only-11",
+      "superglue-11",
+      "temporal_graph-11"
+    ]
+  },
+  "validation_f1": {
+    "physical_prediction_only-11": 0.26992030442924114,
+    "signed_prediction_only-11": 0.26063403134430563,
+    "classic-axis_rank": 0.1941900675816933,
+    "classic-cpd_nonrigid": 0.19241939510606587,
+    "classic-cpd_rigid": 0.15696233208442048,
+    "classic-cv": 0.17667857205240448,
+    "classic-geometry": 0.17266498393357632,
+    "classic-ipfp": 0.19819505082026975,
+    "classic-kbest": 0.21812069063320771,
+    "classic-multi_model": 0.15770989688310003,
+    "classic-relative": 0.19892532554164996,
+    "classic-relative_endpoint": 0.20930125420738097,
+    "classic-relative_history": 0.20462438284613294,
+    "classic-rrwm": 0.1977634350951213,
+    "classic-structure": 0.2117642300506821,
+    "extra_trees-11": 0.2292690132829401,
+    "histboost-11": 0.24291076853044744,
+    "superglue-11": 0.2396719262461522,
+    "temporal_graph-11": 0.2534675726639742,
+    "opgm_motion_tau0.05-11": 0.22304673803960504,
+    "opgm_motion_tau0.2-11": 0.22376740419305943,
+    "point_twix_l1-11": 0.18516289058526267,
+    "point_twix_l4-11": 0.15832900541265554,
+    "ngm-11": 0.22536898793923174,
+    "pca_gm-11": 0.23403955439175614,
+    "bcpd-author": 0.1975957528992267,
+    "bcpd-robust-init": 0.1965510634975971,
+    "global_joint_full-11": 0.2243220094397557,
+    "joint_diagonal-11": 0.26149517001785655,
+    "joint_full-11": 0.272621953255844,
+    "position_diagonal-11": 0.26500514184449747,
+    "position_full-11": 0.2594454292094895,
+    "coordinate-group_pair-11": 0.243394755014218,
+    "coordinate-world_fixed-11": 0.20442426130089197,
+    "coordinate-group_fixed-11": 0.26633486947551394,
+    "optimization-layers1_lr0.001-11": 0.17394675240642687,
+    "optimization-layers4_lr0.0001-11": 0.18781258927788713
+  },
+  "candidate": "joint_full-11",
+  "conditions": {
+    "gap_seconds": [
+      15,
+      20
+    ],
+    "recovery_seconds": 2,
+    "prehistory_seconds": 4,
+    "onset_seconds": 4,
+    "added_sigma_metres": [
+      0.5,
+      1.5,
+      4.0
+    ],
+    "xyz_noise_std_multiplier": [
+      1,
+      2,
+      1.2
+    ],
+    "turnover_fraction": [
+      0,
+      0.15,
+      0.3
+    ],
+    "clutter_fraction": [
+      0,
+      0.15
+    ],
+    "random_seed_base": 78000000,
+    "observation_dropout_probability": 0.05
+  },
+  "windows": [
+    {
+      "source": "Huang",
+      "record": "analysis_trial_01",
+      "window": "analysis_trial_01-window000.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_01-window000.npz",
+      "sha256": "af63be4cfd09b96acaa50f94e182df3ba00d47f266f12fad5a077ca9d565a05f",
+      "targets": 7
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_01",
+      "window": "analysis_trial_01-window001.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_01-window001.npz",
+      "sha256": "43b374b42224115cc64d4fa5806a991e70506694531a34eeabb3b02a2080ee8a",
+      "targets": 7
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_01",
+      "window": "analysis_trial_01-window002.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_01-window002.npz",
+      "sha256": "e6ebb9a56ba6f256f0124ad9f2973add089b462c2f6f4961aa1083d6801545df",
+      "targets": 7
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_02",
+      "window": "analysis_trial_02-window000.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_02-window000.npz",
+      "sha256": "3d65b7d370cf04dfcfa795e31a79f60276fc22aff45342bb6fc5178f5b32185a",
+      "targets": 11
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_02",
+      "window": "analysis_trial_02-window001.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_02-window001.npz",
+      "sha256": "9745e6e33e40c76a0997569b156bfe83e47c05b75edf01a17374791d09d5d524",
+      "targets": 11
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_02",
+      "window": "analysis_trial_02-window002.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_02-window002.npz",
+      "sha256": "c697eae60ae98a7313650f236cc45496e2dc87f2abdd89b7f829460a809df442",
+      "targets": 11
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_03",
+      "window": "analysis_trial_03-window000.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_03-window000.npz",
+      "sha256": "d0e7eff37c60847d1d2c55661a0743e411441c8ab942e85aa7f07d4d514257c8",
+      "targets": 10
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_03",
+      "window": "analysis_trial_03-window001.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_03-window001.npz",
+      "sha256": "1973c5b4108afe461190af9714835b16165b4530b0538cce23e02cbe69d59973",
+      "targets": 10
+    },
+    {
+      "source": "Huang",
+      "record": "analysis_trial_03",
+      "window": "analysis_trial_03-window002.npz",
+      "dimensions": 2,
+      "path": "paper-public-extra-validation/reserved/analysis_trial_03-window002.npz",
+      "sha256": "3afd92c2cccd02377ec248bb1a2cfc933e0e18cc2e194e98b6c32bf5f4899cea",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff1",
+      "window": "D1-ff1-5963220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff1-5963220.npz",
+      "sha256": "b69ff287c5f60501b911d7507a6540f9f61dbb13ebd01fbfd63c463f07963f60",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff1",
+      "window": "D1-ff1-5978220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff1-5978220.npz",
+      "sha256": "cebf37ff6c3b0bc9fa148d2327dec8286e3bec0720d5344934e1f56862a92849",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff1",
+      "window": "D1-ff1-5987220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff1-5987220.npz",
+      "sha256": "a6d73b6af51651ff4cf1bd93bacfea89692afdaffdf405ff8d74031329feaa1d",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff1",
+      "window": "D1-ff1-5999220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff1-5999220.npz",
+      "sha256": "5a044ba26ee62831a0df317826a3a80a47be050309a2da946f17b7425935c8a5",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff1",
+      "window": "D1-ff1-6080220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff1-6080220.npz",
+      "sha256": "cc08833e73f41c5550e432573b6a7351d518493602114f1fed3941dcf8019634",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff2",
+      "window": "D1-ff2-2244460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff2-2244460.npz",
+      "sha256": "4bfeda22ba4a0289cdaba5905fbd4c07ef65ccfade7d765fa0cd760ae4e42f2c",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff2",
+      "window": "D1-ff2-2259460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff2-2259460.npz",
+      "sha256": "882017409fb49a36767b9865f67145f1407488398aa7c378c1ca63cfe83eba0c",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff2",
+      "window": "D1-ff2-2274460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff2-2274460.npz",
+      "sha256": "dfaf1ed59c7b6f91f83e52676b3d8683c7fd0d2df00c149749ca069094e00221",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff2",
+      "window": "D1-ff2-2286460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff2-2286460.npz",
+      "sha256": "cb4e64bf643b01ddd2a7d4487f2a9a5ec24d7455cecee1115cb7bb66dedd760f",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff2",
+      "window": "D1-ff2-2301460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff2-2301460.npz",
+      "sha256": "e626c51596a1e3f41f24374a64608aaafafe7c1bb368a4becdb0692e9612ae53",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff3",
+      "window": "D1-ff3-1740460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff3-1740460.npz",
+      "sha256": "77c2663ac64df5607545920320b88b70d307537861e780ef08acdb8f33673daf",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff3",
+      "window": "D1-ff3-1743460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff3-1743460.npz",
+      "sha256": "46afb3b1a51558283de55d21203e1fc6b7c86cdb5191c4b2c87c07d5ab4f91d2",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff3",
+      "window": "D1-ff3-1746460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff3-1746460.npz",
+      "sha256": "70799dc84ca79d9f3896203ea6fb538f6cc31b741948af88a8165c16c80499bf",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff3",
+      "window": "D1-ff3-1920460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff3-1920460.npz",
+      "sha256": "0537d76d074f29467cf4c4b045a836cb95929ae110890dd17a8a7a2cd6ff8446",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff3",
+      "window": "D1-ff3-1923460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff3-1923460.npz",
+      "sha256": "8f7c46195547da7baaa181da97b3818b9525ffbcd3fc7d0656b95f3dca8f5173",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff4",
+      "window": "D1-ff4-1661220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff4-1661220.npz",
+      "sha256": "08754d200374ffa8d362164972a28e04c814ad87c910022af74fc66ad9dc97d6",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff4",
+      "window": "D1-ff4-1712220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff4-1712220.npz",
+      "sha256": "8c244f64b05bcde24ea86471351e8aef083a55bd8377cb159d9810d7d1bf999b",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff4",
+      "window": "D1-ff4-1727220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff4-1727220.npz",
+      "sha256": "c54613758b5d5a53d283b2e0447d93173cdb7b2bb40ddbad49923af73c84284b",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff4",
+      "window": "D1-ff4-1775220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff4-1775220.npz",
+      "sha256": "ff8122c8b4834beddab2b1c366a6ef03df49c3385c372ad8c7b47e31c354871d",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff4",
+      "window": "D1-ff4-1790220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff4-1790220.npz",
+      "sha256": "b243c6a4867da125600ebb25ffd797ecd5171c78d91ef2b596078b863dbd78ed",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff5",
+      "window": "D1-ff5-1847200.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff5-1847200.npz",
+      "sha256": "4240977ee2d9f6a189a19b625336b5ca7b4067d094ea07c4c09605130e693876",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff5",
+      "window": "D1-ff5-1880200.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff5-1880200.npz",
+      "sha256": "d72f0bd6d4e03165bbc101077ca41e526479269a6c1630bbed3d3d92298fef67",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff5",
+      "window": "D1-ff5-1892200.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff5-1892200.npz",
+      "sha256": "9b24acfde3c2d958e532eba549224ec81e63d1bdf197cbd4c95ebc7a6a8da1fc",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff5",
+      "window": "D1-ff5-1901200.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff5-1901200.npz",
+      "sha256": "8301d5022abf3472e87ddb2e9957b5906e704ea84550f8d5b916004f081ef55f",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff5",
+      "window": "D1-ff5-1913200.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff5-1913200.npz",
+      "sha256": "df2ebfbbb8f66a49ea927b86926cd0e2d989ceb6ab4baa712a6fcc864e46bb65",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff6",
+      "window": "D1-ff6-1608460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff6-1608460.npz",
+      "sha256": "f1a1c40583d8deeff7fc766769b411ec029d201e52db7096f5edef69c7836077",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff6",
+      "window": "D1-ff6-1629460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff6-1629460.npz",
+      "sha256": "e5a6b02074a67e56a9489f95662f6875c5dcf1dd8ed8c8af2cc37db72050fbaf",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff6",
+      "window": "D1-ff6-1650460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff6-1650460.npz",
+      "sha256": "1aae33f70a6fc88fddedc85dcab3f66bc260291e2d4456c92380390133185aa2",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff6",
+      "window": "D1-ff6-1674460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff6-1674460.npz",
+      "sha256": "0e760e49576a0be9bfa78ce4107ddcb2c7ed0356dbba7976f022581983d65f43",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff6",
+      "window": "D1-ff6-1695460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff6-1695460.npz",
+      "sha256": "05169053e8608d2955df60fce0440ead7793e8615bfd8ce58c7b47e34a42e0e5",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff7",
+      "window": "D1-ff7-3065820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff7-3065820.npz",
+      "sha256": "19b438324e0e9ec5330b8c5c94f7d5fdf29e36b698977da363ce778599190428",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff7",
+      "window": "D1-ff7-3074820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff7-3074820.npz",
+      "sha256": "f90dd3d09f9c74a43f81c0e6c296b7038bba6a0edef991cb842aea2466d8da6c",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff7",
+      "window": "D1-ff7-3083820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff7-3083820.npz",
+      "sha256": "b754c8333618dbd58f8c90b2d1f46ce696d9ca6615da11d8d9e19c61b4bd10ae",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff7",
+      "window": "D1-ff7-3092820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff7-3092820.npz",
+      "sha256": "059055172aa0e630734386ce338f5ef40effc720f38aae0d885ca6412ee8286b",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff7",
+      "window": "D1-ff7-3101820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff7-3101820.npz",
+      "sha256": "f74f9509d9f331c10a86831db5b774220dd095f821d805c517b08507c7aee035",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff8",
+      "window": "D1-ff8-5465820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff8-5465820.npz",
+      "sha256": "587a31a5875b895bd778a7a8799ec60d27ae43914f7fd7ce4005d3f917207997",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff8",
+      "window": "D1-ff8-5480820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff8-5480820.npz",
+      "sha256": "452fc97e99c74dc71a268c19c82b05c6e354c2caa8237db5e9ef68040bab284e",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff8",
+      "window": "D1-ff8-5495820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff8-5495820.npz",
+      "sha256": "c181a73304d5d9895108c4e2a30df5ccbd5c54cf763d710745aad2c84e55e48d",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff8",
+      "window": "D1-ff8-5513820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff8-5513820.npz",
+      "sha256": "a119a8692f593d6da92ae4c91b306450aa49a0993a6a85bbd68a21ed19160248",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff8",
+      "window": "D1-ff8-5528820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff8-5528820.npz",
+      "sha256": "bafa63db2011e73c79321caa25e7a5129019236486375243c7b30e02584fa896",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff9",
+      "window": "D1-ff9-4043820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff9-4043820.npz",
+      "sha256": "bd88b0f4489e4d2b581d8a75cd3037348fd033ccb42ce4a13b345ed19dbb8e76",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff9",
+      "window": "D1-ff9-4055820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff9-4055820.npz",
+      "sha256": "2493335fc80b402c6f9d04631e43a19a93cce3494d035bb263946267d83ee97a",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff9",
+      "window": "D1-ff9-4067820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff9-4067820.npz",
+      "sha256": "2f666ca1ab46e7a71f27adac8c88713b23ee8742a309bcadba02a1c50510133e",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff9",
+      "window": "D1-ff9-4079820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff9-4079820.npz",
+      "sha256": "5223ecf7a902de70af62263af58ffda05e9fc8fa6b443454ef6aae5946c7c4bb",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "ff9",
+      "window": "D1-ff9-4091820.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff9-4091820.npz",
+      "sha256": "2095865f046171925bf3247603662d10484ac788458c889327c5acd2cc42734f",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "ff10",
+      "window": "D1-ff10-3843000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff10-3843000.npz",
+      "sha256": "a1ceadaf28238e7faa15c4345042b8314f0b09375318ff061dd9ecbf406008d4",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff10",
+      "window": "D1-ff10-3852000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff10-3852000.npz",
+      "sha256": "5c247a46c845c8cf5bac4b055cb8b816e5f220baf8b230c066f2ac48ead2c1b0",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff10",
+      "window": "D1-ff10-3861000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff10-3861000.npz",
+      "sha256": "5e82817cc21350ec343e276cba329ddf0f5dc8783606d6c437571e78b9bd2dc4",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff10",
+      "window": "D1-ff10-3873000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff10-3873000.npz",
+      "sha256": "698754c1c3bef4b5681f82a36464d00eb4cd05987c0af31a48afeff01cfe7093",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff10",
+      "window": "D1-ff10-3972000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff10-3972000.npz",
+      "sha256": "c140dc62f4650391b3adb7d7d1ed12a1a2971212735658f07f869884e6695395",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "ff11",
+      "window": "D1-ff11-5730000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff11-5730000.npz",
+      "sha256": "c670db82ff80cf96cf0f87d383ec0a9a9195dc7ca49d221306a29af18df22701",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "ff11",
+      "window": "D1-ff11-5736000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff11-5736000.npz",
+      "sha256": "7c25c10a843cfeb69475b85930471b0e928500130cbe6f2cfa257e60262c99f9",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff11",
+      "window": "D1-ff11-5742000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff11-5742000.npz",
+      "sha256": "6ccf309eb30ec1cde0992ec93a7a81008feacc4a1328830b94ff7601404ae979",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff11",
+      "window": "D1-ff11-5748000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff11-5748000.npz",
+      "sha256": "4377aecf933c712363712b1a394f6e87dd68088067f7bd9bd64e7553bf9d267e",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "ff11",
+      "window": "D1-ff11-5754000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-ff11-5754000.npz",
+      "sha256": "c33ff45f9b64cfec1380e076e8605138b6bf0542ed61a4fa37e7b3150437c30f",
+      "targets": 10
+    },
+    {
+      "source": "D1",
+      "record": "hf1",
+      "window": "D1-hf1-1785420.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf1-1785420.npz",
+      "sha256": "6f60ba3118a63b991709d0426e40630d5ec2cce45bc2ac6bdf1a22d83b7b4871",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "hf1",
+      "window": "D1-hf1-1809420.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf1-1809420.npz",
+      "sha256": "11240192aecae83ee545a3d0e88d15afac40142699e50aa2d82b005337fc2d22",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf1",
+      "window": "D1-hf1-1833420.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf1-1833420.npz",
+      "sha256": "75a4ac1e14780e8ae5191e50da7da8dd2cf90a6e1942b587283756c9b48826d4",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf1",
+      "window": "D1-hf1-1860420.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf1-1860420.npz",
+      "sha256": "adcd6bbebf77beca09321c800a3bc8c2d7c266388ac9250645a636fd11ce733e",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "hf1",
+      "window": "D1-hf1-1884420.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf1-1884420.npz",
+      "sha256": "a951a07683a44fedc1378038e3e4facb90b118a846b98f4e63808fa669850271",
+      "targets": 7
+    },
+    {
+      "source": "D1",
+      "record": "hf2",
+      "window": "D1-hf2-2054280.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf2-2054280.npz",
+      "sha256": "55afc25532a2f1a88926beece6de57508c08453e8b32b5354524dd333031e60a",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "hf2",
+      "window": "D1-hf2-2078280.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf2-2078280.npz",
+      "sha256": "af9473cb29b9eabfac7d4a9f95505abe76e554f7353dd4730d7aa8c75333a6b6",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf2",
+      "window": "D1-hf2-2102280.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf2-2102280.npz",
+      "sha256": "51a8ad0acfb13016a55684d4434b6dd24bcd0d4736844df08bb66164f1dbd570",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf2",
+      "window": "D1-hf2-2129280.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf2-2129280.npz",
+      "sha256": "116bb397737726731b77b680d77851f29ce8eec73d787c05b24a58d6af4cb417",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf2",
+      "window": "D1-hf2-2153280.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf2-2153280.npz",
+      "sha256": "eb7fc9d44ce2d8f16b9bdfb9b1e97603751be640c403c7434382d82134454267",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf3",
+      "window": "D1-hf3-2054980.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf3-2054980.npz",
+      "sha256": "f725565de3d043d05e916291fde78132b6624a9f3172136db4f36abda0674767",
+      "targets": 6
+    },
+    {
+      "source": "D1",
+      "record": "hf3",
+      "window": "D1-hf3-2084980.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf3-2084980.npz",
+      "sha256": "835b735828d7f8429889b406c682224a8f3114085e0c85dcefd2589a332d3d1b",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf3",
+      "window": "D1-hf3-2111980.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf3-2111980.npz",
+      "sha256": "f56b6e9de70a1f81f9efd99a74a64efe2b18d1472b78cb6282dc4dd5a6e932c4",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf3",
+      "window": "D1-hf3-2138980.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf3-2138980.npz",
+      "sha256": "ea5daccca9a3571f23cfd557926bd7d9a5fd928f2c21c99f0c67260c89e03867",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf3",
+      "window": "D1-hf3-2168980.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf3-2168980.npz",
+      "sha256": "b7d09e0dab5d24646a1b3e7dd732c15750a1f4db260a525f4941c1c834cf6b91",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf4",
+      "window": "D1-hf4-2023000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf4-2023000.npz",
+      "sha256": "a5e82f45af199bc9a41acc22f4edeacaa28c486f9e25b6d11f7371fc591b6840",
+      "targets": 8
+    },
+    {
+      "source": "D1",
+      "record": "hf4",
+      "window": "D1-hf4-2047000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf4-2047000.npz",
+      "sha256": "0dbd6b1710fc2b34c8f5bd667c772d8f9fc15538c10973127b8880e7308690a5",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf4",
+      "window": "D1-hf4-2074000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf4-2074000.npz",
+      "sha256": "5172fe22e8944a3c0049854eb5a31c28d2aafa733485c231f80714a3dac7746d",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf4",
+      "window": "D1-hf4-2101000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf4-2101000.npz",
+      "sha256": "7c1cd13aa5debb04dca2fa16aa7d8dec4feee4a4c936276887d1539429b206cf",
+      "targets": 9
+    },
+    {
+      "source": "D1",
+      "record": "hf4",
+      "window": "D1-hf4-2125000.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D1/D1-hf4-2125000.npz",
+      "sha256": "491b028569c448d1c721d251f9a196961c3142ceba7ed01fc1a60a2416b6d5ec",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffA1",
+      "window": "D2-ffA1-4104160.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA1-4104160.npz",
+      "sha256": "39dbf5a80786f54b58e85e7e0cb3d429ccd4d6964a52e01c13ccf7b719fc8237",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffA1",
+      "window": "D2-ffA1-4125160.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA1-4125160.npz",
+      "sha256": "d37dc2a423ffd494aa96918e80f583b1d2a0da98fbfc33f6288d7a8bba7d138c",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffA1",
+      "window": "D2-ffA1-4170160.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA1-4170160.npz",
+      "sha256": "0d427abf201a83210a5f970648ab284fcc5ed6fd57189aecc74ec590616a4104",
+      "targets": 7
+    },
+    {
+      "source": "D2",
+      "record": "ffA1",
+      "window": "D2-ffA1-4200160.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA1-4200160.npz",
+      "sha256": "e3bc79e1afcd49884a0946e8b97112dbe3db44cedda7c5da4a97a8c37d521bb5",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffA1",
+      "window": "D2-ffA1-4254160.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA1-4254160.npz",
+      "sha256": "545d438d055020d83ef0994dcbf33838548eb2db22168654e008bebf842af7e1",
+      "targets": 7
+    },
+    {
+      "source": "D2",
+      "record": "ffA2",
+      "window": "D2-ffA2-4083940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA2-4083940.npz",
+      "sha256": "d9fe62697cc03f3de60e52bde29bad680d231c6d14d074be9c7e9131de7ad425",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA2",
+      "window": "D2-ffA2-4107940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA2-4107940.npz",
+      "sha256": "94e45553c13860202a3b0c833f69d333691960877ce9c1636412178c6ed3ba1e",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA2",
+      "window": "D2-ffA2-4152940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA2-4152940.npz",
+      "sha256": "0895f331c5b6a02872082b3efdceb5001ff9f93930e517fa7e44502385b720e0",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA2",
+      "window": "D2-ffA2-4194940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA2-4194940.npz",
+      "sha256": "d08c3f5a6943e7ff74b31080011e6f2af1a1181d4bc69bbed97fc7cbf0e6ca18",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffA2",
+      "window": "D2-ffA2-4257940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA2-4257940.npz",
+      "sha256": "a3872bbed2d365b7396f2ae86942c0223b5525184c10dd0531dd935b4b49c748",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA3",
+      "window": "D2-ffA3-3596340.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA3-3596340.npz",
+      "sha256": "198d36e4dac0cde23d102b928b8ff65eaa4471a85a5b74c19fd6523999ce61b0",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA3",
+      "window": "D2-ffA3-3614340.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA3-3614340.npz",
+      "sha256": "fa4af4b7defb691e8b4d3000bf82e2846e62159340acd2670c25a1c983a6a8d0",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffA3",
+      "window": "D2-ffA3-3665340.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA3-3665340.npz",
+      "sha256": "f17c14fcac7668db28b4ec27d65fd065cb9ce2e4be51c4ed9895375f642b069f",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA3",
+      "window": "D2-ffA3-3713340.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA3-3713340.npz",
+      "sha256": "96deefc513226cbd9141df343c0953f6ccee88aa5345aff43782ea65a632bec1",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA3",
+      "window": "D2-ffA3-3770340.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA3-3770340.npz",
+      "sha256": "2c2c057d8e02994a927f629d877a7af557fb822b61183e433ea8df1fde8514ef",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA4",
+      "window": "D2-ffA4-3556460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA4-3556460.npz",
+      "sha256": "6ef5da3434205a6f9ee58f4290bcd5f6b0fe3b35f4fde2e86dffb040210809f7",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA4",
+      "window": "D2-ffA4-3574460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA4-3574460.npz",
+      "sha256": "72a1694c50ffcbd8c0aac8523a4f83a4ef5b5c0584e86b8c52feb3fbe271dd4b",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA4",
+      "window": "D2-ffA4-3598460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA4-3598460.npz",
+      "sha256": "3c544d84939c69ae2e0415e73f4096ea77435384ae19e5d3dcc1a0859d94996e",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA4",
+      "window": "D2-ffA4-3652460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA4-3652460.npz",
+      "sha256": "ebbe7fc6d44d1b93d2e3fa8bea5fdcd99f8865556c0967a0661ef345e4569e9e",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA4",
+      "window": "D2-ffA4-3721460.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA4-3721460.npz",
+      "sha256": "d07b2f7c0aa92939129dba2826382fc1e3452b51e5c5d4a4e80abd327e74bf0c",
+      "targets": 7
+    },
+    {
+      "source": "D2",
+      "record": "ffA5",
+      "window": "D2-ffA5-3660660.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA5-3660660.npz",
+      "sha256": "292b7b3238d9a721903b61b3cf54a2b99be312b119b09a07182a779bd6756650",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA5",
+      "window": "D2-ffA5-3696660.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA5-3696660.npz",
+      "sha256": "b9a2a0b76cd9b1cd16ed1aac588d71f28686394e22729cc11d975d9f73412f9e",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA5",
+      "window": "D2-ffA5-3759660.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA5-3759660.npz",
+      "sha256": "05dd7b58e5e8e3c4b7c2fd9217641230763678699402c9f2398f20915199a953",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA5",
+      "window": "D2-ffA5-3858660.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA5-3858660.npz",
+      "sha256": "3da190a14039958f713746f813776791e8e16585552798a9f7a45d435860d065",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffA5",
+      "window": "D2-ffA5-3897660.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffA5-3897660.npz",
+      "sha256": "81fbab7c545240afabdd3825226bc744ec70238c218a1987fdd161cfe93b2e8f",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB1",
+      "window": "D2-ffB1-4161220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB1-4161220.npz",
+      "sha256": "cb757b6ea9489454fa9035363d98799ebd4c8cdd0df92f86005b47f5a3d4591d",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB1",
+      "window": "D2-ffB1-4185220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB1-4185220.npz",
+      "sha256": "d49cde675534409fbb055d624bce935fbd66dd3751178848e1bd7fc20082fddf",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB1",
+      "window": "D2-ffB1-4194220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB1-4194220.npz",
+      "sha256": "33152ae53da0beab95aa0ab7ab99a9face5b656242890d9cd34324e7a9cefba7",
+      "targets": 6
+    },
+    {
+      "source": "D2",
+      "record": "ffB1",
+      "window": "D2-ffB1-4215220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB1-4215220.npz",
+      "sha256": "e337bf1db073adf1573ab405a0dd56583036de5baefa0d4c47cc32d600a756a0",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB1",
+      "window": "D2-ffB1-4254220.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB1-4254220.npz",
+      "sha256": "ded76fad7d9c4b33302b8e5e10e1fe49e6c5b8140f52d6f9c848759c234acb4c",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffB2",
+      "window": "D2-ffB2-3383520.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB2-3383520.npz",
+      "sha256": "e87f2c0aab00e3ce37dc08cfaf7a2ad89c65a6346ed7c89652e3fe1b2eba6710",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB2",
+      "window": "D2-ffB2-3392520.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB2-3392520.npz",
+      "sha256": "7e3709f054b05321de4d53c7bf3ecc1bd94af6ae34ed3d1ee7437d49b04ec261",
+      "targets": 7
+    },
+    {
+      "source": "D2",
+      "record": "ffB2",
+      "window": "D2-ffB2-3407520.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB2-3407520.npz",
+      "sha256": "5b640fde37c17f17783abb6ba0163b65a613e76da3af1412c9bc1de993611009",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB2",
+      "window": "D2-ffB2-3449520.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB2-3449520.npz",
+      "sha256": "ed1c5ae55058139189ad97f8f65edd486d076d55e25bcf9da27bfec9b491a471",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB2",
+      "window": "D2-ffB2-3524520.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB2-3524520.npz",
+      "sha256": "2a67f7f5eada9b13685d5aae78d52e36572aef82f424349d2e730d6771a7158b",
+      "targets": 7
+    },
+    {
+      "source": "D2",
+      "record": "ffB3",
+      "window": "D2-ffB3-5013940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB3-5013940.npz",
+      "sha256": "7397f97efb5feb8e4c235e22e12d51d11ceb7a164560fb0dc0cab26926051cad",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB3",
+      "window": "D2-ffB3-5022940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB3-5022940.npz",
+      "sha256": "7be84f6b49c1e10adb746d636a39426f34328bfebbda3fab3bcfbcfcfac04d78",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB3",
+      "window": "D2-ffB3-5034940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB3-5034940.npz",
+      "sha256": "60fd4d8a0e8f9037b02cb5dfc5ee33386d487779ee74d6afb89d629b739c60d1",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB3",
+      "window": "D2-ffB3-5064940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB3-5064940.npz",
+      "sha256": "fb10e220eb8f978ba020d61917a6f59dc2a8791ef6f7a93bf38aae5648a295ad",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB3",
+      "window": "D2-ffB3-5187940.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB3-5187940.npz",
+      "sha256": "154cae7adfab8bb1cbe31fc914afc37d2eef552a9792151b4d992f3d83524b6d",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffB4",
+      "window": "D2-ffB4-5582500.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB4-5582500.npz",
+      "sha256": "1c557fcf0791d1587d213ffff4dfefc023f26827b57718ca0d60520efdd298bb",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB4",
+      "window": "D2-ffB4-5609500.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB4-5609500.npz",
+      "sha256": "423303b4892f79c4e21407b15e35c1854af7fd837911dd71b312accbd0e29da1",
+      "targets": 6
+    },
+    {
+      "source": "D2",
+      "record": "ffB4",
+      "window": "D2-ffB4-5630500.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB4-5630500.npz",
+      "sha256": "2f66ed7c3e60264dd4d63ed4b6366cbe47a0f8cba020624c7b4ad2c623d61866",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB4",
+      "window": "D2-ffB4-5699500.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB4-5699500.npz",
+      "sha256": "5ee8ad488ca650d085f08a09755eea01c9912f46e8e60c8dc28f0f38086dfd39",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB4",
+      "window": "D2-ffB4-5717500.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB4-5717500.npz",
+      "sha256": "62dae94a745d852bccf9e8258811bb9ffe9e143b357a9864b4030f30f1332998",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffB5",
+      "window": "D2-ffB5-3711920.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB5-3711920.npz",
+      "sha256": "7c4a164f54e23cf669c5f638a59748481d3abb83d94b737b685b3473240e8d3b",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB5",
+      "window": "D2-ffB5-3720920.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB5-3720920.npz",
+      "sha256": "528cf036ec99a7ea0f601bf9eb022d153c7808addeb428632c23d17174a72caf",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB5",
+      "window": "D2-ffB5-3735920.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB5-3735920.npz",
+      "sha256": "32ac63ba9ca084582a9d959b5f9a37690bf4e30ba653385d1ad060e82884c81c",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB5",
+      "window": "D2-ffB5-3768920.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB5-3768920.npz",
+      "sha256": "4d4d4ab3de4d54ab6c0d789eb48d57e162fc102aa920314584ccf2927d8ccc87",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffB5",
+      "window": "D2-ffB5-3798920.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffB5-3798920.npz",
+      "sha256": "b8f754436ecc369fb04b9d76aa274311d8fa2789413076cee163dd70ea42be7b",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC1",
+      "window": "D2-ffC1-3725580.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC1-3725580.npz",
+      "sha256": "f96bf0b03064fa42faccab693254e8bacafe399cf3ff724a3fcd7be8ff3b53ac",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC1",
+      "window": "D2-ffC1-3737580.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC1-3737580.npz",
+      "sha256": "1a112199284bb537d76198fc56da4b73681de43e9c824b7ef596d3112b1f3560",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC1",
+      "window": "D2-ffC1-3764580.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC1-3764580.npz",
+      "sha256": "a3d5fe9d80463b74de84fac2482c8e52760609e98151e7e63f504de673cb1add",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC1",
+      "window": "D2-ffC1-3797580.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC1-3797580.npz",
+      "sha256": "d90bc8a7a2844c4c31f8485ab15550a9aeb00126bbf1c1ef88e077ecbaadbda3",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC1",
+      "window": "D2-ffC1-3815580.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC1-3815580.npz",
+      "sha256": "7538cbfd2cf7bfbe579141cd009e5c5b67e889892ab0d7b84acebf94feafe55b",
+      "targets": 8
+    },
+    {
+      "source": "D2",
+      "record": "ffC2",
+      "window": "D2-ffC2-4461480.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC2-4461480.npz",
+      "sha256": "4ae698bf8f1f44ff74514cf9717faed88e5d039e90e206d2b2000d6baeafe713",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC2",
+      "window": "D2-ffC2-4500480.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC2-4500480.npz",
+      "sha256": "1e86af5af21cff02786d1aecc86ca026145dcf71f681a92b2afdbbcf654d1573",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffC2",
+      "window": "D2-ffC2-4545480.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC2-4545480.npz",
+      "sha256": "ae9dbabf332977909d9206cae0ab9281c1a9a7effa553031224e5934e82787d3",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC2",
+      "window": "D2-ffC2-4566480.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC2-4566480.npz",
+      "sha256": "ecc332695baaee17cb85e13e0536c12daff74f8d40a01d74d97ff4935f11e735",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffC2",
+      "window": "D2-ffC2-4599480.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC2-4599480.npz",
+      "sha256": "bba9641e4609bf6bd6b7336529b2de359e5bc988c9dc1a9b1a4bac153dda2f06",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC3",
+      "window": "D2-ffC3-4884840.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC3-4884840.npz",
+      "sha256": "e6c8f79bf9523bc34902adaea162f266cf5719956a3250d4b949cf176f4f2c69",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC3",
+      "window": "D2-ffC3-4902840.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC3-4902840.npz",
+      "sha256": "5854e8e58a098d88111a8067fe92a60f6866317595d1f9f607e740a2d0077b48",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC3",
+      "window": "D2-ffC3-4926840.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC3-4926840.npz",
+      "sha256": "96aad7efdaa89391ccb6657c34f06935aebce16cb6dd2851efef7600b919035c",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC3",
+      "window": "D2-ffC3-4947840.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC3-4947840.npz",
+      "sha256": "abeb36c18390eca3efd58c649acf135b03a06ec60bdd9c6511ee9300268a422d",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffC3",
+      "window": "D2-ffC3-4959840.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC3-4959840.npz",
+      "sha256": "3c2a8cc9bc272b7b76f2c121c22dee526fbef17f82fffa5e01169651287beea2",
+      "targets": 9
+    },
+    {
+      "source": "D2",
+      "record": "ffC4",
+      "window": "D2-ffC4-4296020.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC4-4296020.npz",
+      "sha256": "897e32a92b1ec71b8bace00e239f86e385a3b70e7031a0449766f8f37f2c3a01",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC4",
+      "window": "D2-ffC4-4329020.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC4-4329020.npz",
+      "sha256": "c467d2f9ca43a48283cd8926321ad705a8bac89538fe5bc59b008d35b4eab16b",
+      "targets": 7
+    },
+    {
+      "source": "D2",
+      "record": "ffC4",
+      "window": "D2-ffC4-4416020.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC4-4416020.npz",
+      "sha256": "ea52b1f6c5955e460a682498cf64df63cfd1dd44f784ff3056a8b6fdb19b43c4",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC4",
+      "window": "D2-ffC4-4488020.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC4-4488020.npz",
+      "sha256": "9f959e70727c86d3467eac62665a58bc4a0a23411ffb442240bd3890bd8ea3e6",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC4",
+      "window": "D2-ffC4-4542020.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC4-4542020.npz",
+      "sha256": "d2984670ff4da4fa513d5647355e1878f9ed08324036c9955852f73168cce3ac",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC5",
+      "window": "D2-ffC5-5235080.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC5-5235080.npz",
+      "sha256": "91e7b7a6188ccec7dd0e0349858eb073521a212048d12faa9a0eefe62cf47312",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC5",
+      "window": "D2-ffC5-5304080.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC5-5304080.npz",
+      "sha256": "488f096c6f826ea263b474497943b9a3521a0be70276284f74c7093910cd9bcc",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC5",
+      "window": "D2-ffC5-5361080.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC5-5361080.npz",
+      "sha256": "be4842d8dfdf48b2ad51b503368d0e817eabbe4f980d267d5695ad3ed8b4e594",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC5",
+      "window": "D2-ffC5-5436080.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC5-5436080.npz",
+      "sha256": "b792ae2be47995a5cdcfd150b5b2b59750cc4e1c3f44b03ac875c23acbf8cf11",
+      "targets": 10
+    },
+    {
+      "source": "D2",
+      "record": "ffC5",
+      "window": "D2-ffC5-5502080.npz",
+      "dimensions": 3,
+      "path": "paper-public-coordinated-reserve/prepared-D2/D2-ffC5-5502080.npz",
+      "sha256": "d526cf06f9f603ee1269c911cf47708537a6cc04633c64e147f7720139fb04ca",
+      "targets": 6
+    }
+  ],
+  "sha256": {
+    "paper-closeout/aggregate.py": "9149900c5f1eb51865f5b425bdc50eb72ff9bc582adf9c43bc74bc25d261d5e0",
+    "paper-closeout/frozen_evaluation.py": "9ab1fd77003f7ce636dfeca36e9c7ff2874604e1bf68f5eb2a61409639639635",
+    "paper-closeout/preflight.py": "b0e07e14eb91ac1f9ad665966c9bf1fab4301e29caeb92ad7f332d623b2949ea",
+    "paper-dense-study/acquire_external.py": "c2a4ba9f9238ecc7eb6fcc4264a1a2801ee3697c36599a8450d06407c6b01c06",
+    "paper-dense-study/analyze.py": "a4ad66f431c2a2e9e905eaec5c32af716edb8b9a3b67f5a9b2154557192ea74e",
+    "paper-dense-study/baselines.py": "263538158534f4cc9c970eca941b03c053c50a8da58a990347f915562da524f5",
+    "paper-dense-study/benchmark.py": "e891e48f3ffdae2f9e164996a5d41ba7d78113e530d3f831186eb04fe7ac6e5b",
+    "paper-dense-study/benchmark_corrected.py": "4b0747fc1a434345884054aff422eb62ed5c1ac149d0a6196c10b4699e94312a",
+    "paper-dense-study/browser_check.py": "d647c56958bec81d9e4bc4964c83b8d7a240fb31a24788c62fab94c7e99f0254",
+    "paper-dense-study/build_report.py": "c49b3e1994685901619c406966549c31cf1edf8a2b53a88fb768f4899c7b0dce",
+    "paper-dense-study/core.py": "c990c71b981d495c33564e3c14c9506a0906d262be765533d8109f5b67bcc171",
+    "paper-dense-study/development.py": "cf2ee98ba2547c6e91494537119e2928f33611b905fcf16c0d7b273a68ebb337",
+    "paper-dense-study/evaluate_final.py": "86f3ce874882e40ba44997a0d3b6c726c76971b99497fd159bfae8b2c17cc2c8",
+    "paper-dense-study/experiment.py": "c7c9432ba6cbc006c009068be10dc9b9215ff58962fe33d8ac7484c8d96e8b8b",
+    "paper-dense-study/final_plan.py": "0b06a37f1fcbedfbab3338e4830cc0619a40135d690f3b3e249af7d7b3e9021f",
+    "paper-dense-study/finish.py": "184c1fd326a5e5a276afc7b92acdcd1e54de8f3380387f2b38a91c79f18a4d59",
+    "paper-dense-study/freeze.py": "271c3ee3598ba8ebd91211cb98a9b952394c856bff23cd0e5c2cd5c7f33302ad",
+    "paper-dense-study/frontend.py": "f7aeb16b8d7adb9b4d44f31a025bc40c112adf95f41d9373d91f347ed13761d9",
+    "paper-dense-study/legacy_features.py": "5d5ada6d2db0670747e1da634248f1e17492920f56e3e7c2a115b64b892f22eb",
+    "paper-dense-study/legacy_geometry.py": "cf9a447083100407794bd3de0c3d5d5a45c3e6197ed5335dea7591a54eaf5b94",
+    "paper-dense-study/legacy_network.py": "65a90a129eae77ea4e8d438470d5ba6edac2930b1afec1b0600a4e8cc710a0d2",
+    "paper-dense-study/make_figures.py": "507dffa0ae2fbc1fdcc33ad885b2a3bfc13fca33caeed59af19f8d22d9c9abe5",
+    "paper-dense-study/model.py": "2adb1d5fb418804ecf5df72ce86651c6f2c8507e5e93d07a9aa17c10da27f1f0",
+    "paper-dense-study/package.py": "e5aadb22053a91f0daaab99e33ecb697b7c6439d6942e4f4107136bae359e7eb",
+    "paper-dense-study/postprocess.py": "21595ca6b195de1eff1c685909cc3384a1797f4fac34530e4e08143438f81585",
+    "paper-dense-study/prepare_external.py": "dc72866b2626353c9f63ca18ca648e631d2b083faa6f2b0664eb7bee3940ddd9",
+    "paper-dense-study/readiness.py": "d275e876f6e5c9b554b94db51784d8ee24556fc56c821e3d456c90e5138becf0",
+    "paper-dense-study/replay.py": "4cc1e3c05d52876fbd72dcd497c60ff1b00cdfbde2a2e5ab98eab459f1284fb4",
+    "paper-dense-study/run_training.py": "559df799346a44fff527a6ec6790aff7d7330b6bac1292d6ff4529024ee52d90",
+    "paper-dense-study/scenarios.py": "f6d3969e5a5d48aaf16a7a0a0511cfe6e792b762ba4d997bcb3209c45b993d49",
+    "paper-dense-study/vendor_verify.py": "379d443ce1609982e2342ded4bfad9e429805a62bd01d303e5ff979cbbf0a225",
+    "paper-dense-study/verify.py": "af01d60026c44c9c3acd62e684d1699c34b70fac48f3239491d1a4407a7f2935",
+    "paper-finalization/audit_completed_results.py": "78aab8f0c600bea8233266601981bf1f49f7dd5dde0dc973e784c877ead03f5c",
+    "paper-finalization/build_manuscript.py": "56c7bc0b2f7483e753c65c3aa6acd9fa310f8f0122e69dcabd39bd0194628a9c",
+    "paper-finalization/update_scope.py": "791ad2da1096462167f83c8c55ad95b21225f4bb3c842da5ecffb22e0686424a",
+    "paper-finalization/verify_manuscript.py": "2bc9e3d46acbd6ba310d878435cb8dd2916564bc240e17f7a21dc7243798bc55",
+    "paper-public-association-v10/bcpd_baseline.py": "184824f83d9ad08d87b60fa867162e5ef576b8d6d6db9159f1d43f85d669d820",
+    "paper-public-association-v10/classical_physics.py": "8655d95753b76181a30ef30b1d350a1246f7ecd7a66193fe838be0310b9ca7b7",
+    "paper-public-association-v10/physical_mixture.py": "e7983e71dc8d6b8f0c6ccb6b3dd05c6bb138d638f4af7f41bef7e9768acd3644",
+    "paper-public-association-v10/run.py": "606902a989d4d4921fe373cd0029aab029ba070cb8b64bdbd5229c68222b471d",
+    "paper-public-association-v10/vendor/bcpd/bcpd": "12f0d75b45ba5c46922291a420ed35db3fcb740bfe28cf339874c9b030cfdf42",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/_common.py": "38fd4496d3ad094f21de6b67510cd96bd67168356593845713302621fb42af25",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/bunny.py": "fffcd14207e06da6e3692abc92b792a62bcf4596e348389d13a51c8e6bd9f6fb",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/gbcpd.py": "27e640a2f543a58f9e3594fa96622915bda68cd3490c28bfb6dc9bb19cc8d598",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/gbcpd_plusplus.py": "9fb0c6f7a216eb123dd3ddf7666bd072b2d05058712d1a06a8117f2e1444b066",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/hierarchy.py": "5f323941bf97212344a6e99d5c14bd3fa2ba103c478728b098fbfda379d35a48",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/landmark_check.py": "b97fab4a1dd59acd2d20afaa8e9695391cd40f2adfbedcbf35a3b0d7fd793c56",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/nonrigid.py": "559b87b70796da8d5f07576f0ac775d64be552cd3bbf05e7dac289f9834f7063",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/plusplus.py": "e496046c953fc5335f4bd598b1ad603d6e6189e399e20deeb571da3219c3e4a1",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/reconstruction.py": "4b943ddcc7f73760886d8b7393a3f18bd79d02eb7f81f2c9b7cabb0463472b48",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/rigid.py": "d1ca1970dcb2266b2df0a11b603cd01650d68356b30867982076f0051a140766",
+    "paper-public-association-v10/vendor/bcpd/demo-python/bcpd/transfer.py": "7834fd911f08808673ebf8534a4ca844e445bd85168264f56f043fbea0027c22",
+    "paper-public-association-v10/vendor/bcpd/demo-python/det/_common.py": "cbed2e7a6f18f3a718291929c94f7dbe32dd523a67235862f708fb8f719c30b2",
+    "paper-public-association-v10/vendor/bcpd/demo-python/det/audio.py": "ae0e9bb405b462ac16cafaebb15393bef64d921e54a34f16808aa1db9cde549e",
+    "paper-public-association-v10/vendor/bcpd/demo-python/det/image.py": "97bef6d988b55f23b6850a25e782926c5a478b7a0b844fb8146647eb1ac73162",
+    "paper-public-association-v10/vendor/bcpd/demo-python/det/merfish.py": "9a82a8cb09c2384136de06cacf706ac5c2354dfb22ed36bc78b9faf07e3f6444",
+    "paper-public-association-v10/vendor/bcpd/demo-python/det/mosta.py": "c28099efad813a0f3f85f07542d6434ccb7a352f4294d2f4f7ded92238013e3b",
+    "paper-public-association-v10/vendor/bcpd/demo-python/det/shape.py": "5358fb73f27205968720c29974fdd7cbf07575df348a223b576a411e5208bc6c",
+    "paper-public-association-v10/vendor/bcpd/demo-python/dld/_common.py": "bc3fc7f193f9cca1f39aec78491090035a221bb12f53977ee3b6457d0c0ba129",
+    "paper-public-association-v10/vendor/bcpd/demo-python/dld/face.py": "d75ec67714df6e9cbe07dc5d82e88dc0e920cfd1357bd441510c83ada0583f58",
+    "paper-public-association-v10/vendor/bcpd/demo-python/dld/hand.py": "37899efe6787997b6efdef43fa068a55ef097fa21644186d1cb8fbc9cbc5264b",
+    "paper-public-association-v10/vendor/bcpd/demo-python/viewers/_viewer.py": "1fde313cad5103cb19695740af71cb156c3f9e90427d9f799ba9e933841c2219",
+    "paper-public-association-v10/vendor/bcpd/demo-python/viewers/meshpath.py": "25d951f9da3d995f81cb5a1fceaeab234d5636b68090e494e9cfacdf19bf070f",
+    "paper-public-association-v10/vendor/bcpd/demo-python/viewers/optpath.py": "be905512d0578545dfc3364ebe1873ad3c4b5431fb5f560bb64ab3cb53fb221f",
+    "paper-public-association-v10/vendor/bcpd/demo-python/viewers/view_results.py": "ebafa587c0fcd70bea3e20969bde32ce85486d0f5dee33fc2c8fa91562e87554",
+    "paper-public-association-v11/group_model.py": "db9085c66dae16640d2ab532690247e9f28c760bf3a2418c6d3dda9e270bed8e",
+    "paper-public-association-v11/shared_physics.py": "1c9c2e55d4108a063c81c4c5a1dfc76db36e88371143526213101c7f02a26dae",
+    "paper-public-association-v11/train_groups.py": "f03b54f1b699f355a4dce0ce370f14262b80493dc5f69609c44197dd592e6c19",
+    "paper-public-association-v12/audit_visible_windows.py": "b93f1ff2d703cd1e3e8b35dd0b97218121148f4a9441e209b3b01c0b23b1875d",
+    "paper-public-association-v12/lean_inference.py": "6ae8cc2a62a82e5710cf8ca03a0083bfc890c07bdee0f8941b279414c978d22d",
+    "paper-public-association-v12/replicate.py": "ff5caa494f7949514b858c74356e663a85ed58a15d0b38c78a50fa0cd43d6f9a",
+    "paper-public-association-v12/summarize_replications.py": "07d8aff9693601d0dc6f8bd6c806bd37d7d1fa38b2f535b8f00db1a42c74f601",
+    "paper-public-association-v12/verify_lean.py": "373013ea73714bccc9559484dd4764efd4d622863a98330abdc5c5a8570f0ec9",
+    "paper-public-association-v12/verify_lean_validation.py": "741b5b65414ade5cadc3e31bd6921f80d8589e08ddcfa4b85c44700faa52e946",
+    "paper-public-association-v13/matching_partition.py": "9ad6d56ae7827a4b5c2151d0a0e06cf572141d0bf5369d3a2b00ccfecf5a7cb3",
+    "paper-public-association-v13/train_structured.py": "bb03c2b48a5fcfe7ba2ba7885cd103ce12674c4b868ff7ad5ba0ba6c2f95fe51",
+    "paper-public-association-v13/verify_partition.py": "afd6e945a82a62842597f0c64638fb5bc87d1d379840043ff4b0427b12cb9458",
+    "paper-public-association-v14/audit_source_kinematics.py": "f8aa6307f781c4fcd35f2a375d734cf415db743766a67325f0791a4c9f483736",
+    "paper-public-association-v14/baselines/classic-cv-development.json": "79966557572f6732289f3259d47d1ba725c30999f94f251d3cc53d5239bccefb",
+    "paper-public-association-v14/baselines/classic-ipfp-development.json": "2a5b6fd2eb6c0d9b64bb489e863cf13447f4925a963478eb1b1d0c66907a1c9c",
+    "paper-public-association-v14/baselines/classic-kbest-development.json": "7b09c8c5d033f4dd58188e064435dc3d9e882fb64e88ef18964b86a6e0985dc3",
+    "paper-public-association-v14/baselines/classic-relative_history-development.json": "510a2e0a17bd1e4482b1ad15aa7dd66d6adcb3213d6aceae142f923f99befcee",
+    "paper-public-association-v14/baselines/histboost-11-development.json": "7b10da8d3568537f1b326f880acdf338e33f7603e5f59bbbd711046797216784",
+    "paper-public-association-v14/baselines/histboost-11.pkl": "b3aefcb5402352916f4faf07e1f3920ae63df8de862379600a4f61291075f51f",
+    "paper-public-association-v14/baselines/superglue-11-development.json": "4783d2f4abcecfc48203cb78404e2200fd8e6091cd1d77adbb92026616fb86af",
+    "paper-public-association-v14/baselines/superglue-11.pt": "b7c150a131c4e955277f2d8c76366f0a6fd320be8705675c49681fc969c38b4a",
+    "paper-public-association-v14/baselines/temporal_graph-11-development.json": "c96102aefa9d07ef1d219c2f53ec6a53f611718d415eebb65ebd164d35cc2954",
+    "paper-public-association-v14/baselines/temporal_graph-11.pt": "5349c6765b2dd373ac00cad1e3f8fb18cf43888d5b74bd1e1baa0363f4c39dfe",
+    "paper-public-association-v14/export_summary.py": "f0b327cd01ecbef6c8b27f02644cf6b7dac7bdcd40bbb9aa9ac379adfedbc62f",
+    "paper-public-association-v14/frozen_diagnostic.py": "7b313448840fb2f955e09d68afff4073249919848d48f496ddc1901d16fc2253",
+    "paper-public-association-v14/opgm/opgm_motion_tau0.2-11-development.json": "eaac9854a8aa5649b6edb4501a385af29a4bdc08b2e9b67ffff939515a4d9489",
+    "paper-public-association-v14/opgm/opgm_motion_tau0.2-11.pt": "2d09428406bbc3a52abc8dd388e71e2e723d74c192f984b07ca9513025f746fd",
+    "paper-public-association-v14/opgm_adapter.py": "b0d2f04856b50fd4df1757abbfa015ca94911fdc7c90585959a5d15d7d77e5f9",
+    "paper-public-association-v14/refit.py": "e81e440ea2a60efc2d9a12754b82fc7c1863968a6cba368975ea79522368ebe0",
+    "paper-public-association-v14/summary.json": "caa7fadaf8ec2cbe295f8964b593e386f1757c8ba833052fcda41d499709149d",
+    "paper-public-association-v14/train_opgm.py": "497b82ef8c182026612e62ecf218b7ca5c5a1a33350e5dadca10d58d8a927a80",
+    "paper-public-association-v14/v10/models/physical_prediction_only-11.pt": "be6c463c761953c8a06c25f2f348f28ef78d0f718d0193a9e54c699849c1ada5",
+    "paper-public-association-v14/v10/physical_prediction_only-11-development.json": "b1444a57c748fc441572834579ffc29912f329ef710cf25b55162cab72a1c3cf",
+    "paper-public-association-v14/vendor/OPGMrs/eval.py": "64d8dc4a217250664df13abb8f7352037591c3baf1a742e294f8696b409cc808",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/GCAN_OPGM_model.py": "58fb8f4522f2d1c4b3055e2e9ba6e45cdbf0b57ed285820f14e0094da0c5a42f",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/GCA_module.py": "19e998af8364564c8bfd4a5da1bd7ceea46bb39e000dcfa032545ce1d82daac6",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/adaptive_classifier.py": "48af5c42ab895a5e00035c07735a4a0b0bd818022bc170f52fe8d34b2d02ef8c",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/cross_attention_layer.py": "b9bb9cf38b233023cee2cf6391e29d4d663df9bb290c78a93d5fd9976ae7950e",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/model_config.py": "0340df1cc95e6a5e2751f65d452c7b662e04ea09637942f9ae388c3a6eb226b2",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/positional_encoding_layer.py": "221a8128fbc295da52b538a92b6f9019644b1978b05374701adace153e50f045",
+    "paper-public-association-v14/vendor/OPGMrs/models/GCAN_OPGM/self_attention_layer.py": "ec223a014254dca9434a00426e84afad58f9c5be45d0e891cbe2acc088271aad",
+    "paper-public-association-v14/vendor/OPGMrs/src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "paper-public-association-v14/vendor/OPGMrs/src/backbone.py": "d28dae25acd00e9df8723bec60ce074475de1e72defa19c8810c120c03cd8175",
+    "paper-public-association-v14/vendor/OPGMrs/src/backbone_gcan.py": "de671b643a519a0480a7c8e3b49bc2366b273b762f4003f325418d644837fd49",
+    "paper-public-association-v14/vendor/OPGMrs/src/build_graphs.py": "ba72a313638bcb477ca479714f8e5dd7116bf1ce90a268ca3bb86409508f888d",
+    "paper-public-association-v14/vendor/OPGMrs/src/dataset/__init__.py": "f2fd1339e57f78dad8d9383205d336b7593a76670958e7d68d5c1579043e2028",
+    "paper-public-association-v14/vendor/OPGMrs/src/dataset/base_dataset.py": "b2e72d102625dfbd2bab861fcf47acaee576803ae4e7fccc369bd6030a1d93d3",
+    "paper-public-association-v14/vendor/OPGMrs/src/dataset/data_loader.py": "505d5e51271e71a6dd8c8eba8bc6961fce8c77f6a15e76283cdd49a49c448738",
+    "paper-public-association-v14/vendor/OPGMrs/src/dataset/dataset_config.py": "049d15c9ebeb9678aa308d87cad30986cbaae0441bde96f04d44aea94641c842",
+    "paper-public-association-v14/vendor/OPGMrs/src/dataset/qaplib.py": "2291592d11c2f8ca1e241d9428ad4731731687312603a7a3e0cb96a35ae4360d",
+    "paper-public-association-v14/vendor/OPGMrs/src/displacement_layer.py": "2a7424e0bef6bfeaaae083715edaef8ccdf02c4ec8d68b8c3184f113419e460e",
+    "paper-public-association-v14/vendor/OPGMrs/src/evaluation_metric.py": "ea71a4bc97720efe86c8bfc2c0f661bb4093efcc707cbe33d2b81470da74f1b5",
+    "paper-public-association-v14/vendor/OPGMrs/src/factorize_graph_matching.py": "ac94503c3b2fc3cab6e45d0620753cc0a2bd34c34a7b700edcac77599675ef71",
+    "paper-public-association-v14/vendor/OPGMrs/src/feature_align.py": "69e949e1def01d5352f7f5518f8c61c740b169087ad8588e00e78f32122d1cf5",
+    "paper-public-association-v14/vendor/OPGMrs/src/gconv.py": "f571f25c72937002532c3e8c35a722d015252f49440cf7f688cefe1971808da9",
+    "paper-public-association-v14/vendor/OPGMrs/src/lap_solvers/ILP.py": "c0027d8e391cce6610c1c976785fcdf12c52f2258a7f2766cf21ae5235f0250b",
+    "paper-public-association-v14/vendor/OPGMrs/src/lap_solvers/__init__.py": "66d8af1ebd468954af374523894781b5cd15b09294edc203d6b86fa4463e8e8d",
+    "paper-public-association-v14/vendor/OPGMrs/src/lap_solvers/hungarian.py": "78b626c4718da10537418e3d109b6b86c7770a613395bb306f83479ee147c629",
+    "paper-public-association-v14/vendor/OPGMrs/src/lap_solvers/sinkhorn.py": "0b8a210bdf037d799ac3b84d03ffcc613e52275f1eb0a23d876d014dae6887dc",
+    "paper-public-association-v14/vendor/OPGMrs/src/loss_func.py": "cecc26ad1c57449b73f4de01fe611461f01327ae1951e869f17f9e8d29dda92c",
+    "paper-public-association-v14/vendor/OPGMrs/src/parallel/__init__.py": "d17100b293491fb29d235aef700ac04c54097183d810a0371951546dcf5b06b0",
+    "paper-public-association-v14/vendor/OPGMrs/src/parallel/data_parallel.py": "1552e7d9467e2fd367bd12f653b97679f09f3bf5d84981f296b2cef7fa1a1373",
+    "paper-public-association-v14/vendor/OPGMrs/src/parallel/scatter_gather.py": "919bd14704737489a4c1153eb79c99f2f6a12f8ef175ac6f9f5b214b3f25f8f8",
+    "paper-public-association-v14/vendor/OPGMrs/src/pgm_solver/pma.py": "38f392edaa96117e71c2d23318ecd6aef160a19899136cc6ca84f6bd0751de9a",
+    "paper-public-association-v14/vendor/OPGMrs/src/pgm_solver/pmatnew.py": "c5d2d76241ab9229f96f62fb25201f796cfae880e69679148688c019a4648345",
+    "paper-public-association-v14/vendor/OPGMrs/src/qap_solvers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "paper-public-association-v14/vendor/OPGMrs/src/qap_solvers/rrwhm.py": "ef91ff5df4c74eb05cb984fe7230e8dc11dd873e3033ba25bfebb446e4595b7b",
+    "paper-public-association-v14/vendor/OPGMrs/src/qap_solvers/rrwm.py": "a5b458fcb5d6498d539b28fdd01c0e62b8dcdbb4e3594848c6069a63771ffc71",
+    "paper-public-association-v14/vendor/OPGMrs/src/qap_solvers/spectral_matching.py": "84783e7dba29892edfef237e9a842bc8578ddd3aab3e3739199cd77f14bf532c",
+    "paper-public-association-v14/vendor/OPGMrs/src/sparse_torch/__init__.py": "842e5bb1120dc0c6d7922bd90c93570f4ca2805b78513d9a4aea43cecf02c006",
+    "paper-public-association-v14/vendor/OPGMrs/src/sparse_torch/csx_matrix.py": "2efd47092ed75e2568d8ccab08da3c00dce205bb5d1a06f2e42266ff93edf372",
+    "paper-public-association-v14/vendor/OPGMrs/src/spectral_clustering.py": "fddebfa59e979645a2eb41991081f1fff01ad8717de0a94fc5db0e7bb061cb07",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/config.py": "62418ce1ee6d9fdcd08bbf0dc67521ba5884b14afda54f2e82ed054a3eb19074",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/count_model_params.py": "ea6f666d5296e3e08d502838ef5c5ad8736010d8d6960637637c81dad25050ed",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/data_to_cuda.py": "505b15214c3e22ff1ba89deec10ac3809eb0560a83ba64d12ab9543bfba89e7c",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/dup_stdout_manager.py": "dd0c1f556b04c07e1930f5bc9f1c29357279dc114f524c64b38b44fc62a6f99f",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/gpu_memory.py": "d73ba4305765d129c5ca61de1d6611ab635f30af467868072d5375b0cf8cf307",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/model_sl.py": "b5a267befeda733b28bfe198e4590be07db0e4676ef363eab53fdbdf62ae1ad3",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/pad_tensor.py": "8e2eef61fea459b40e36dd39673f7465228eabcf0ba6031f02ea2ab74cb3d841",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/parse_args.py": "e1b91b2c18c178a6afa8debfddc5166c31d29637038ee3a3a3dd3de3833debb9",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/print_easydict.py": "fc87b92446641f08f2592a84760be7575b899b4c181f2b4ec2d280daf3d792bb",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/sparse.py": "fe817c07d9a9334eaab29d1fd6c40d9fd28209dd65da9fae4f8acbe37dca1478",
+    "paper-public-association-v14/vendor/OPGMrs/src/utils/timer.py": "5a748f5efd163711d0a45d51cc69b66d54472dcb3292cb0af6fca861be2e1602",
+    "paper-public-association-v14/verify_opgm.py": "4ddbedd0b0e256eb76e6ce4896f35ba3014f015b952db256e383fcd7ef8cfb28",
+    "paper-public-association-v14/verify_visible.py": "5330f8e3a42f3a66259635457bc78b8333d00f5580d0a62b1727fc543c3a870d",
+    "paper-public-association-v14/visible_data.py": "3f819dcf0da7a56e9cf0d5741e65597c5d2b5599f5341cfb427abf50bc6d2b4b",
+    "paper-public-association-v15/._twix_adapter.py": "0b94069878226016a11d40a6f91240275848c2bede195088c4772f0d3401eb13",
+    "paper-public-association-v15/._verify_twix.py": "0b94069878226016a11d40a6f91240275848c2bede195088c4772f0d3401eb13",
+    "paper-public-association-v15/diagnose_information.py": "018f59ccfdf46f9999485123dae306717b6c900347c51f83734e993c12a909e2",
+    "paper-public-association-v15/train_twix.py": "dd6eb87586ba7f573356648cc6180389580d5da39e08f5b896ea0d430fb39c29",
+    "paper-public-association-v15/twix_adapter.py": "32c41a43fecbf6c5d239c34f9e962dedcf317f516baa1bc7900b8ba6754a88af",
+    "paper-public-association-v15/vendor/TWiX/src/association/twix/._loss.py": "0b94069878226016a11d40a6f91240275848c2bede195088c4772f0d3401eb13",
+    "paper-public-association-v15/vendor/TWiX/src/association/twix/._train.py": "0b94069878226016a11d40a6f91240275848c2bede195088c4772f0d3401eb13",
+    "paper-public-association-v15/vendor/TWiX/src/association/twix/._twix.py": "0b94069878226016a11d40a6f91240275848c2bede195088c4772f0d3401eb13",
+    "paper-public-association-v15/vendor/TWiX/src/association/twix/loss.py": "d8bb5ddd30b66469746bda3edd4f646f0e625ad9fb3edcef3251c67028d6c423",
+    "paper-public-association-v15/vendor/TWiX/src/association/twix/train.py": "bc0edfbc538bc6f0dc69ffc43e1123c5a24bfbb1a93d8e1e90f4a4ddcb75fba7",
+    "paper-public-association-v15/vendor/TWiX/src/association/twix/twix.py": "01368b4d3b047ddb6a3ce96edd5e17bf8198d92d7e28cbbbefc51f2c2c578680",
+    "paper-public-association-v15/verify_twix.py": "ca24c6ca03ebdd99fdfde602764ab281464bc786aac82a61896b74e0e6b8e1dd",
+    "paper-public-association-v16/audit_bcpd.py": "31e7ef9e940beeea9719c8f0db4beef155b78eca8f8708e8e3f842195abe80c4",
+    "paper-public-association-v16/baselines/pca_gm-11-development.json": "936d898ee8e71711c40892fb008fbff91c728a3f05957ae6b117e34c56266cbf",
+    "paper-public-association-v16/baselines/pca_gm-11.pt": "9c740ea67b438ab6c2ba78625d3d05000de23c90d7d96f933ac74e18d92a748f",
+    "paper-public-association-v16/bcpd/bcpd-author-development.json": "07579496411e7933106b90d2e7214e1b27917ad4c6c2154e8a033e16bbfe05a5",
+    "paper-public-association-v16/ngm_microbatch.py": "c90516e6b315590f62d6747d2ae25273e8d8598f9c2c834961761859339dc40f",
+    "paper-public-association-v16/refit_cpu.py": "e14c4e5e5f0414d50fde8f99e6aadf20667d40cb17533e8303e25eb16b510d26",
+    "paper-public-association-v16/robust_bcpd.py": "694c047630631fd9567705f7e8b4bc848396aa2c7c474f45b2f6f115b30f1bde",
+    "paper-public-association-v17/global_joint_full-11-development.json": "c28005259fe555dacbc383949b59836e6c19031852e6d954dea3bcf8522b4b18",
+    "paper-public-association-v17/joint_full-11-development.json": "b86ee4bfb4c3a9b52dfb2e4053c008f9d43781bf4861b1cbce3e2d6e8153c0d0",
+    "paper-public-association-v17/kinematic_mixture.py": "b9c04a0718861a8ca7e0ebd674a2cbcb7d4f3b70ec458a433ceb796d87d61038",
+    "paper-public-association-v17/models/global_joint_full-11.pt": "c9b733f01d0df937e1be2365fd061f1455f6607e2fb307f8e665b9960c56ce56",
+    "paper-public-association-v17/models/joint_full-11.pt": "daca16121276805f9501ed8d2981a5e0f68b1888ab355b443d89303b1d9289ac",
+    "paper-public-association-v17/train.py": "688399c19621b74ab2782a366627cf05bb8d3ed4071c155c436b616c4b48bce3",
+    "paper-public-association-v17/verify.py": "065e5f5cdd9b43b13e6951cf438705c42ec48333f7fba62cba032784572b0a2b",
+    "paper-public-association-v18/cost_structure.py": "6b0c03982c184a76bb68592b69d863a1935d065742b9a4d3a250ae65d7c0f70c",
+    "paper-public-association-v18/paired_effects.py": "ae057e42eb89f34f791d9eb9e05c28ce1fa5efb873011f888bcf7ec90059f0b9",
+    "paper-public-association-v18/verify_inference_inputs.py": "781f813fd52a5b08c2fbbb974435430afb5d20b4c1607a76f65ec32e51385c68",
+    "paper-public-association-v19/paired_seed_effects.py": "30b6c11516467e9dcff77dc5490e78c1fad7258411d8749a7ee2d90a9bca67bc",
+    "paper-public-association-v19/replicate.py": "bf62938122baf8408a9eacd0e46b87947148c8e0943145516d4ad5ab11772531",
+    "paper-public-association-v19/summarize.py": "10ed219b07043712cec415cc807b84a991c9f8019994f9bc640cdab949b0dcb3",
+    "paper-public-association-v2/benchmark_training_device.py": "0f58b5ea7bf1d8065108efe326a1ae13b93a277969b17de5c546982661fc0f18",
+    "paper-public-association-v2/classical_public.py": "28bd18b230d1e9f1516b8568c6a1f8d8de4a71dfd52f48ee1cffc580f1ffea96",
+    "paper-public-association-v2/data_protocol.py": "8b499b176d397c544bbc0da3bbbdf0aa363006851460a43921cdc3324f38d0d6",
+    "paper-public-association-v2/develop.py": "2a24eb875b4e7760cb6fa699eca810a165f3681e3652c18779c1eb2fedc743d4",
+    "paper-public-association-v2/develop_neural.py": "b954acf73985904c08b68772a1bcd9e29b6f7ad39f21d7a13971ac59216125ee",
+    "paper-public-association-v2/episodes.py": "c5fb763d8ef57727befb31982b4f4864acc799ba4045add333cc86b601f606c0",
+    "paper-public-association-v2/learners.py": "f88ec241c8fe88232fe20f2210c2b9bcc638c22e902aed58834b74d2c2cd52ba",
+    "paper-public-association-v2/legacy_adapter.py": "6871110db46bc161e724cc32fb812efdf8b2f728e389f242e6530cb16488170a",
+    "paper-public-association-v2/load_model.py": "a969dbba6cd08c83191689817bbb2f2c9dd213f83aaa1146b8af373686932339",
+    "paper-public-association-v2/metric_models.py": "fdb6e9bb861eaa8ec9d0b9ecf29c0aecfc12d1597a478cfe322d2e283519ee71",
+    "paper-public-association-v2/run_development.py": "6ec41367e8ca2ddcb6d43aee6d3f80df6959b29a5e48c197adf4f315ee6450a8",
+    "paper-public-association-v2/strong_geometry.py": "4bd9559b43cb9fdb86f6549ee54ccf8aacb925eb40de8e726654dd992f935227",
+    "paper-public-association-v2/temporal_models.py": "5ca3e481a6a7be26de1334f6623647fe13990883a966dd962fdcdb408a5bb191",
+    "paper-public-association-v2/train_fusion.py": "a1b664b726a6621e0251eb9aaf46d10fe548cfc3c167b8d03363cadf8703fbe4",
+    "paper-public-association-v2/train_fusion_base.py": "8b61f827a08997e6396a3533a5c6aa1f706362745654b16dca4dd8d89b57df22",
+    "paper-public-association-v2/train_legacy.py": "4c799303f3baa508fd3c6e6fe1656d00e9fac6c14eff68afb24312f393fc70c8",
+    "paper-public-association-v2/train_metric.py": "b51fb548b17e6122c4427155fd541a2e9112ead7c4a38fcfe01255ff70331543",
+    "paper-public-association-v2/train_models.py": "b26a329b04d758260f26e738df701c18e312af5de169462fff4c3ae02fe7b1a1",
+    "paper-public-association-v2/train_pca.py": "55173394b29f8c561ea60d18cd275e0ff8b2f258f79cb18920e9174b908807d8",
+    "paper-public-association-v2/train_trees.py": "6023d476caa95eaba1e4f8aa371e6b1cc9dacb73fa97904993a7ed6d1e77ee81",
+    "paper-public-association-v2/verify_legacy_batch.py": "c257afb2720294d9381370f088dbec30213745447b7cf9a34e078420a6feb4bc",
+    "paper-public-association-v2/verify_models.py": "5dc67a8001618c0a6173e1922c946c41c712140861f1be680d9780d472437374",
+    "paper-public-association-v20/benchmark.py": "fb1f70fc9388f874044b02efbb1bf67089f65bcf494fe53d80d8f726a712d1f7",
+    "paper-public-association-v20/inspect_device_difference.py": "291923155ca203296160594dbe3d2ac6054ec65163f7b09f92bd447333a6b84c",
+    "paper-public-association-v20/summarize.py": "74941d9fde787ec316883e120b681bfd762a5d94e2f986f76440c6a426d95925",
+    "paper-public-association-v21/audit_twix_representation.py": "0b45f4e19a932e870ca65544b1d7b277633cd2bf5104f239cfd237e44e9ef0b0",
+    "paper-public-association-v21/coordinate_adapter.py": "ba76f5043eb5fddc98168af7d6a4954094fd5786801b94b9a27a86baf324b8a8",
+    "paper-public-association-v21/runs/group_fixed-11/point_twix_l1-11-development.json": "a30783fbcae93a49c2e9fd17c8acb12c5f7a9bcbdf1038ec636752233145ac1d",
+    "paper-public-association-v21/runs/group_fixed-11/point_twix_l1-11.pt": "a4a8a0f4ce3fdae635a0d1bb319e38be4095887e4db46edef8fcadf7da8a9759",
+    "paper-public-association-v21/summarize.py": "63cd9a6b3312dc786382136f996cf728b214681ec0ac2f7ecfbf4ca52760ea95",
+    "paper-public-association-v21/train_coordinates.py": "ec2aaaeadc49089004167db4816455c1ce6f2319d1e76cc5c6e48d32698740d3",
+    "paper-public-association-v21/verify_coordinates.py": "29f1817f9fd2c72a822b01489ceb1115cf289a7de3616a79aa35dbfa57dfa86a",
+    "paper-public-association-v22/audit_score_contrast.py": "35f0012f4ae1f63b4bf796a8ceb1c5afa750ff9b0f6875af8380cb1543ca5724",
+    "paper-public-association-v22/twix_optimization.py": "9e96a6d5d5632d93e9f1b76ce2b8b5478014eb383d0ab0be2e825c3689d1d940",
+    "paper-public-association-v23/cost_extension.py": "48208cf2797ce4d15d467d8ce1992add41df63974d510670d8bfac725bce7ed9",
+    "paper-public-association-v24/audit_training_paths.py": "4e00b4ed4aea00e91d8f373a6e7d8c23eb237de1999cff454991eea1135b9a3a",
+    "paper-public-association-v24/baseline_episode.py": "98f00ca89fea3c00c4673af7d3374125195aa0b6f81f0524d47257297bc32794",
+    "paper-public-association-v24/continue_experiments.py": "f58830fdbf1b3edac7e9c5be73bf4c1c2bf891db545cc2faddce3e2da3190c56",
+    "paper-public-association-v24/control_context.py": "a5cfd547b567b36abb6929309cf6a67d60636ac798099d21abc6e7296d8f6d50",
+    "paper-public-association-v24/diagnose_attention_execution.py": "c5297be4e64d72704bd06bb907906737f3ba8692c0b93123d850f38e4ea70665",
+    "paper-public-association-v24/episode_batches.py": "73dde33af801480c74cb052a2cfbb142a1f06096c6a197bc6aaf14538ea0429d",
+    "paper-public-association-v24/export_readiness.py": "0914e3b0a07d95314d912f29ebdee0cb3903e54c02d840424bcfe44ee1c249cf",
+    "paper-public-association-v24/model_path_objective.py": "4850f603553f2beaaa03d163be1655f5644e5277e39f308a19dde33c8259d99e",
+    "paper-public-association-v24/path_effects.py": "582f66759720a477458019c850bbf7d65157f69e3130444168b5ded1fe279333",
+    "paper-public-association-v24/path_fragments.py": "888dee5851e4faa77d76d644a3765fa1a20fe446f651bd14a17d55d4ef75b37d",
+    "paper-public-association-v24/path_loss.py": "b114b54643c4a6f8bfb81e82de1add56bb784b6b3b4514e521d34f705bc51666",
+    "paper-public-association-v24/point_context.py": "52354f12f69ed5cfb18ecd4b6453c3d01cbdbe988316f5794cd659eb5231b4c5",
+    "paper-public-association-v24/prepare_training_paths.py": "141e563e01e9636b0f4d7b4536b94b9caa3a9a640e70117eb4eadcdee619fbe6",
+    "paper-public-association-v24/present_endpoint_loss.py": "816beaea9aab6ecc787c9a6078c76b57b91e2058335311e63aa0d49cae679265",
+    "paper-public-association-v24/refit_path_baselines.py": "d753466c34de6328b63245f267d79ad7f1a85cbecc7cca068bca35b7866a9cb1",
+    "paper-public-association-v24/supervised_path_loss.py": "218c4c634060c3f52100311920f17cae95356a8064e54837634f5ed8433b2beb",
+    "paper-public-association-v24/tracklet_affinity.py": "c3103d142fb3eba45daac411ad871d2fb7ebb718fb4faec8f74e5962ee6e6d19",
+    "paper-public-association-v24/train_supervised_paths.py": "9cf5228ae5dfb4a90072caa19b29dbddd14ef60d46db26bb1386aa6888390a58",
+    "paper-public-association-v24/verify_baseline_episode.py": "59db1624ccbbcb9c6c7a9f2bfc38f79842a5ddf7ea5b5ea9beacceeacef8cec0",
+    "paper-public-association-v24/verify_continuation.py": "cdc7904984f17a7ed10a3ff63a82cf21cf665004ab691ce948b4f5779a5d4646",
+    "paper-public-association-v24/verify_episode_batches.py": "b7cc4731429d7959702b11346dc3513306392680ee2fae66f4ce3fa660814783",
+    "paper-public-association-v24/verify_loss_reference.py": "c5c197a3219f3461fb3309ff1b0913ad0a772e08db7cb01987490d41c33e3978",
+    "paper-public-association-v24/verify_model_path_objective.py": "036a72adffcca325c15b9d1b6f130cba703c7201bcd236d868c497a90554f8ae",
+    "paper-public-association-v24/verify_path_effects.py": "a5de70a73914dde0825db0b36b135b210a6aea5d9bb9d6dfde480f54adc72097",
+    "paper-public-association-v24/verify_path_fragments.py": "66628b1593c316fbfde77fbb13fad5e23aa136959de79cd143d9f030e05ea65f",
+    "paper-public-association-v24/verify_point_context.py": "427b9b877dff159f83dee3f0beebdc0a36c951ac880ab22673396184648b3111",
+    "paper-public-association-v24/verify_present_endpoint_loss.py": "71027aeb440bfd92e843b753fbfb25359acb5f1872c6a4cfd46b0ffdcf3131f0",
+    "paper-public-association-v24/verify_present_model.py": "2c4350d4f2dd905495f7d62b8af897f98e6125583b1ac3791fdf3ac0a89af384",
+    "paper-public-association-v24/verify_supervised_path_loss.py": "e71f818adab29a00991f8fe492c8ccc8f81fd44de95741b4487f406289837143",
+    "paper-public-association-v24/verify_tracklet_affinity.py": "cf86728d7ea9221e91813ede1345c00c03e6f66b400f65e1c2cd2407e831e2f6",
+    "paper-public-association-v3/after_development.py": "fc8045e825fb597644fec802b7502b5680c1359a83b2b68630855d84184187e3",
+    "paper-public-association-v3/audit_input_boundary.py": "c2937c63c0faf3a608278e668f2bddbd4a9413b4ab4725064e613c093e7e7eab",
+    "paper-public-association-v3/benchmark_training_device.py": "ff782cdecfa5395d6f094d664702874fa6f68002d5454f7627038515e3577ed1",
+    "paper-public-association-v3/bridge_model.py": "1094a099859590dd1c5ede3bfa711d98462d6095fc9b7c6c040ee5a16891191a",
+    "paper-public-association-v3/classical_public.py": "28bd18b230d1e9f1516b8568c6a1f8d8de4a71dfd52f48ee1cffc580f1ffea96",
+    "paper-public-association-v3/context_fusion.py": "0afe7ecaae04a7dd44e551d9601cdfc7ba0d84c1f39ea33db5d05b6b61c0c73d",
+    "paper-public-association-v3/data_protocol.py": "ea7e71a27626a7e9e72dad98ce53825bcd86e5ab3af45332ff6057460b1b3557",
+    "paper-public-association-v3/develop.py": "b0cd0903238e2864d8cdb4613a2ac76f10f4414c740a5f77667c1b3bd35feab2",
+    "paper-public-association-v3/develop_neural.py": "f20d9e9792e964ce4497e9f5394c68e3d6722b9edd58e146a83eb7028e5510e6",
+    "paper-public-association-v3/develop_new_candidates.py": "65d126a5eff11791e315bcaf9aee54fbf0c2f41e0daa843b8871b5f3b9c8e977",
+    "paper-public-association-v3/development_cases_v3.py": "14078498e5f3e732dffd4060cf80559bf38a58386aa43458d05c4d852c56fbec",
+    "paper-public-association-v3/episodes.py": "c5fb763d8ef57727befb31982b4f4864acc799ba4045add333cc86b601f606c0",
+    "paper-public-association-v3/learned_relations.py": "b9b16e3a0d0d86e1b480e2a912b67962d9f89f87eb0819760a8f5dc8b7eb6797",
+    "paper-public-association-v3/learners.py": "fc67d1924e0ce84b0b1e4e5f21f5952cb68c4e5731ce6cc9f00c5aa8103a6146",
+    "paper-public-association-v3/legacy_adapter.py": "6871110db46bc161e724cc32fb812efdf8b2f728e389f242e6530cb16488170a",
+    "paper-public-association-v3/load_model.py": "ae184360c0938cdb90f1397d5630e5a744e02e54793246c1907f6b4b6ddcf498",
+    "paper-public-association-v3/metric_models.py": "fdb6e9bb861eaa8ec9d0b9ecf29c0aecfc12d1597a478cfe322d2e283519ee71",
+    "paper-public-association-v3/paired_evidence.py": "1c4a043d319d99b429fa014bb0bc4ebeb1f20cd58396135c0ca17ce56d83c5d4",
+    "paper-public-association-v3/reference_descriptors.py": "0d6cf409eff8a9479f570ca6f99249e7de66c1f24c086d6747e3980bf510b24e",
+    "paper-public-association-v3/run_bridge_pilot.py": "41ce6329f2c6a8251fd00971462ec8777c321fb7c093370ccbdfa9e67a930f90",
+    "paper-public-association-v3/run_development.py": "6ec41367e8ca2ddcb6d43aee6d3f80df6959b29a5e48c197adf4f315ee6450a8",
+    "paper-public-association-v3/run_registered_development.py": "d62015a70b752bd349a501747da2b68f27eee2436a42d1702ef51e62aa3482f0",
+    "paper-public-association-v3/scaling_probe.py": "4df6c89b741b2f935c0915b361368e958a4213ae7884d61fa0ecd180a32133e8",
+    "paper-public-association-v3/soft_graph_refinement.py": "b9c7b6e8024e816811bba6bdb7378948c7624b90121813697f6a1d54e1dd8ff7",
+    "paper-public-association-v3/strong_geometry.py": "c222ff06ca67c0bcc836182a906daab73006764e122e90e2adae3b63217200ab",
+    "paper-public-association-v3/temporal_models.py": "5ca3e481a6a7be26de1334f6623647fe13990883a966dd962fdcdb408a5bb191",
+    "paper-public-association-v3/train_bridge.py": "836f254480d97bcdcfdb242c2a036115919c30076061187d9e9cb399601f2808",
+    "paper-public-association-v3/train_fusion.py": "14db32294441ec55892759805c53b0244630a236f7df956531183c4ae2079ad3",
+    "paper-public-association-v3/train_fusion_base.py": "18192d31c075e024ffec028db8f153291d3cabef514d9fa8589c7fcb98e13a4a",
+    "paper-public-association-v3/train_legacy.py": "cae8e3201e322f77b4318649563ac055727b542e687cdbfaeb6ade9b44cda3f0",
+    "paper-public-association-v3/train_metric.py": "32ecc134a8b646762ddbc0b01eddeb6fff5a2b07b04e4daaed3db49d49b65475",
+    "paper-public-association-v3/train_models.py": "3e21842db532ef0fb8a3ad49f928a28d19c6b46887a4c186a66a2d1290fcb4b0",
+    "paper-public-association-v3/train_ngm.py": "d0bbd920dee0c9432eddf37511279e2a5e319b4ed601ed794ddc6f3d1179d444",
+    "paper-public-association-v3/train_pca.py": "8ecc6353d44a017562d44a60271322ef8b08d4104657622dbe61376153353f57",
+    "paper-public-association-v3/train_trees.py": "3c5a523754b670dc3a9a8987e5aec2d1bc32650556865c5718bd91dbe3df2721",
+    "paper-public-association-v3/vendor/pygmtools-runtime/appdirs.py": "83df6cdac5e19ef4c49bbf688f86d62344e86a973efd298a28d5ef3971e45627",
+    "paper-public-association-v3/vendor/pygmtools-runtime/async_timeout/__init__.py": "405d33a5f5f5bc69b189bee402a34f9bd61e84f574a01568cf127ef8cc6af5d2",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/__init__.py": "b3f934bedad14a00fcfd8177b6923f62c653f11a24d0ab481ad58c6f3d6eda27",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/benchmark.py": "86d0217b3a40528b487bb8cf0a894cbcaa20d2905a85e9403966b3f382312fe7",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/c_astar_src/build_c_astar.py": "36223cf3fb4daa19a5aa9be73ed090cd93de6d30eb8667bb0c8e88b8080a42d4",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/c_astar_src/c_astar_setup.py": "b3079e2b86a7086348c5b8d58c1b27980727dc27f0faf7d8c18a550b2144f935",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/classic_solvers.py": "c1bfe9c513be616ef98e7e933a762fbfcf423b9614f2c37e6058304f3a921ac3",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/dataset.py": "2b16357bdbe105eff4ae31b844bd371e1da7085982cf6e18a9ce2adeba92615d",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/dataset_config.py": "2ecd53f0acd4b0690b9a2009a27b9e55c80d8f32f021d79ab2a235f94ad75699",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/jittor_backend.py": "13b1c02d220754ffe303b40c506bcfae860759221b5a5a9292fb2ead1949be78",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/jittor_modules.py": "aac2831c54e5bdff159943da6d793ecfcd451e9ce73158b2cb2f328fba605f29",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/linear_solvers.py": "50e559b681bce6538fb53adddf2fdceb91864dd5d6527a21d4e83eb2c56af416",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/mindspore_backend.py": "a48e4e0795d023a8512f29b7d95bb9874bc73b142f9895e29a02db03008786fe",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/mindspore_modules.py": "7a3d3cf6acc65b83a9eacc09ec1f2107bf270404d956c424dca3290cfad3fc07",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/multi_graph_solvers.py": "144bcce7b49b0de726f2f21aecd09448a197b85a3bbecff65d3087a24dd03a19",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/neural_solvers.py": "d0db39033a5d56b09e7a31ff0949e363cbd9c211146d96c7c7491be716269cd2",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/numpy_backend.py": "ceba18df0c05382e8d6fe40b96483932e74684d9b6106d7df740753d55dd336d",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/numpy_modules.py": "a7f9b578c0bd6c19ad086343e74e79a5d32ef94ac2324e9936ea7478097e9edb",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/paddle_backend.py": "52992ceee461ea30249aa2dc532eafb7880f14a1d0f270d0ec86a37222474991",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/paddle_modules.py": "8e0a9c7ecdc66b6a85ff51c2a6b7d7d05fdc71d423450667cfbe48cbca9ac316",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/pytorch_astar_modules.py": "311ad21ba4dafe33f849d027df926b7c49d94184c6d8f28b7aae3443a88ec561",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/pytorch_backend.py": "49ca03b040453fd1870ff463898d4e5e6c9c2e407d36b06a99d38b734a24cb7d",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/pytorch_modules.py": "ca0e0a091f0261f08b11effd09b09ddf5b4c8de3e505d97f0d33790a52f7414b",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/tensorflow_backend.py": "100edbb68e76ea04adec52d3049a854dc0e7e42791b07eef964e9f88dd6ba81e",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/tensorflow_modules.py": "6865eb6c0e90f9d7e2f25c088b37342e951553c93d27fefd4f7805244eb6434b",
+    "paper-public-association-v3/vendor/pygmtools-runtime/pygmtools/utils.py": "ffe4a178748e7dd4fbd19505fb74305e8cb2297132479cb23ca3799132e23f92",
+    "paper-public-association-v3/verify_fast_descriptors.py": "4206342e9cff0ae16401f3a33743acde0dbf041f68c0f52b5164e02e81e7c05f",
+    "paper-public-association-v3/verify_legacy_batch.py": "b37c8f85cf998d24e4a4fb0b4ff0ad438cd248bd2796fa9aa0f79381fcac34ec",
+    "paper-public-association-v3/verify_models.py": "29f8a10d093050596558dbb21945cc9afd958700ad1ce975b201a1655da93bca",
+    "paper-public-association-v3/verify_ngm.py": "1f73cdf70b54f290311e342345992413f583856226d9bd8865c5e27452e3dbfd",
+    "paper-public-association-v4/audit_input_boundary.py": "c2937c63c0faf3a608278e668f2bddbd4a9413b4ab4725064e613c093e7e7eab",
+    "paper-public-association-v4/benchmark_training_device.py": "98948aa3726c510641ee93432e7e93788c6cddbfed7bd458c7244faf3fd175bd",
+    "paper-public-association-v4/classical_public.py": "28bd18b230d1e9f1516b8568c6a1f8d8de4a71dfd52f48ee1cffc580f1ffea96",
+    "paper-public-association-v4/context_fusion.py": "0afe7ecaae04a7dd44e551d9601cdfc7ba0d84c1f39ea33db5d05b6b61c0c73d",
+    "paper-public-association-v4/data_protocol.py": "d7ee4f9aadb4f08c227a262b1532c13ed5634dd2454f00eaec0734525a5fb498",
+    "paper-public-association-v4/develop.py": "b0cd0903238e2864d8cdb4613a2ac76f10f4414c740a5f77667c1b3bd35feab2",
+    "paper-public-association-v4/develop_neural.py": "f20d9e9792e964ce4497e9f5394c68e3d6722b9edd58e146a83eb7028e5510e6",
+    "paper-public-association-v4/development_cases_v3.py": "14078498e5f3e732dffd4060cf80559bf38a58386aa43458d05c4d852c56fbec",
+    "paper-public-association-v4/episodes.py": "c5fb763d8ef57727befb31982b4f4864acc799ba4045add333cc86b601f606c0",
+    "paper-public-association-v4/learned_relations.py": "12a63154091eb9e9f343067005a191e12cfe9acb22537272686df318e1354c73",
+    "paper-public-association-v4/learners.py": "fc67d1924e0ce84b0b1e4e5f21f5952cb68c4e5731ce6cc9f00c5aa8103a6146",
+    "paper-public-association-v4/legacy_adapter.py": "6871110db46bc161e724cc32fb812efdf8b2f728e389f242e6530cb16488170a",
+    "paper-public-association-v4/load_model.py": "62511614ea10910d8cb08b184c85a9ae52249ec36441bc0ed909739426f7b4af",
+    "paper-public-association-v4/metric_models.py": "fdb6e9bb861eaa8ec9d0b9ecf29c0aecfc12d1597a478cfe322d2e283519ee71",
+    "paper-public-association-v4/run_data_expansion_pilot.py": "a193a4731f572d6f3e16487716aa280d110237c2c0d35bf2557a7618d4cbfe93",
+    "paper-public-association-v4/run_development.py": "6ec41367e8ca2ddcb6d43aee6d3f80df6959b29a5e48c197adf4f315ee6450a8",
+    "paper-public-association-v4/strong_geometry.py": "c222ff06ca67c0bcc836182a906daab73006764e122e90e2adae3b63217200ab",
+    "paper-public-association-v4/temporal_models.py": "5ca3e481a6a7be26de1334f6623647fe13990883a966dd962fdcdb408a5bb191",
+    "paper-public-association-v4/train_fusion.py": "14db32294441ec55892759805c53b0244630a236f7df956531183c4ae2079ad3",
+    "paper-public-association-v4/train_fusion_base.py": "18192d31c075e024ffec028db8f153291d3cabef514d9fa8589c7fcb98e13a4a",
+    "paper-public-association-v4/train_legacy.py": "8dcb43d26690b43d8d85b192a5db029f1ce3a5e7d42726b3df20f9a239ff866c",
+    "paper-public-association-v4/train_metric.py": "81f348291ed27c1d2c218010b6798603c26a57a768dded498edd9eb4b6f4ff96",
+    "paper-public-association-v4/train_models.py": "0e9fcd4eb85bd3e0a2d760c7de9fe3c52e84ca20c0c2f3730df9a70990e8bebf",
+    "paper-public-association-v4/train_ngm.py": "40a317b68e2ad9a29d24595484f1fefd2328cf5f8a6250031e78115403e83fa3",
+    "paper-public-association-v4/train_pca.py": "1a482ce02b7f90942ccb3f1a603cdc762c01361b9549cbb54d964793568f45ea",
+    "paper-public-association-v4/train_trees.py": "50ff18d6857b17c5aa892872d8073dcc57ce0fd2766a6795187f293ac134da65",
+    "paper-public-association-v4/verify_legacy_batch.py": "3582f72b4a74734eec419eb308275d8bc088a598a675f2d951c8d9d5c4d9a977",
+    "paper-public-association-v4/verify_models.py": "3a57efe8ea09b85a01f2e77c1ab0685d0e02759dca923ca839071db6282e079f",
+    "paper-public-association-v4/verify_ngm.py": "f12acc925f1125c542a7ebb1c2679362f69668f984e5124232970dc3946f3ed9",
+    "paper-public-association-v5-2d/audit_input_boundary.py": "c2937c63c0faf3a608278e668f2bddbd4a9413b4ab4725064e613c093e7e7eab",
+    "paper-public-association-v5-2d/benchmark_training_device.py": "ff782cdecfa5395d6f094d664702874fa6f68002d5454f7627038515e3577ed1",
+    "paper-public-association-v5-2d/classical_public.py": "28bd18b230d1e9f1516b8568c6a1f8d8de4a71dfd52f48ee1cffc580f1ffea96",
+    "paper-public-association-v5-2d/compare_specialization.py": "4d74bb4681ed6e33bb7f9b5e76cf290b3333a01379b08fe41b891b00b5693e18",
+    "paper-public-association-v5-2d/context_fusion.py": "0afe7ecaae04a7dd44e551d9601cdfc7ba0d84c1f39ea33db5d05b6b61c0c73d",
+    "paper-public-association-v5-2d/data_protocol.py": "be99fb38b9ca25bc1596572fa227c41bdce290df5ff1c93c52436f5c27a71ff7",
+    "paper-public-association-v5-2d/develop.py": "b0cd0903238e2864d8cdb4613a2ac76f10f4414c740a5f77667c1b3bd35feab2",
+    "paper-public-association-v5-2d/develop_neural.py": "f20d9e9792e964ce4497e9f5394c68e3d6722b9edd58e146a83eb7028e5510e6",
+    "paper-public-association-v5-2d/development_cases_v3.py": "14078498e5f3e732dffd4060cf80559bf38a58386aa43458d05c4d852c56fbec",
+    "paper-public-association-v5-2d/episodes.py": "c5fb763d8ef57727befb31982b4f4864acc799ba4045add333cc86b601f606c0",
+    "paper-public-association-v5-2d/learned_relations.py": "b9b16e3a0d0d86e1b480e2a912b67962d9f89f87eb0819760a8f5dc8b7eb6797",
+    "paper-public-association-v5-2d/learners.py": "fc67d1924e0ce84b0b1e4e5f21f5952cb68c4e5731ce6cc9f00c5aa8103a6146",
+    "paper-public-association-v5-2d/legacy_adapter.py": "6871110db46bc161e724cc32fb812efdf8b2f728e389f242e6530cb16488170a",
+    "paper-public-association-v5-2d/load_model.py": "ae184360c0938cdb90f1397d5630e5a744e02e54793246c1907f6b4b6ddcf498",
+    "paper-public-association-v5-2d/metric_models.py": "fdb6e9bb861eaa8ec9d0b9ecf29c0aecfc12d1597a478cfe322d2e283519ee71",
+    "paper-public-association-v5-2d/paired_evidence.py": "1c4a043d319d99b429fa014bb0bc4ebeb1f20cd58396135c0ca17ce56d83c5d4",
+    "paper-public-association-v5-2d/reference_descriptors.py": "0d6cf409eff8a9479f570ca6f99249e7de66c1f24c086d6747e3980bf510b24e",
+    "paper-public-association-v5-2d/run_development.py": "6ec41367e8ca2ddcb6d43aee6d3f80df6959b29a5e48c197adf4f315ee6450a8",
+    "paper-public-association-v5-2d/run_specialist.py": "96d9fc06d7e48b76261102b4fd13fa6068ef3e11de98c100837a9ccef6afbc62",
+    "paper-public-association-v5-2d/soft_graph_refinement.py": "b9c7b6e8024e816811bba6bdb7378948c7624b90121813697f6a1d54e1dd8ff7",
+    "paper-public-association-v5-2d/strong_geometry.py": "c222ff06ca67c0bcc836182a906daab73006764e122e90e2adae3b63217200ab",
+    "paper-public-association-v5-2d/temporal_models.py": "5ca3e481a6a7be26de1334f6623647fe13990883a966dd962fdcdb408a5bb191",
+    "paper-public-association-v5-2d/train_fusion.py": "14db32294441ec55892759805c53b0244630a236f7df956531183c4ae2079ad3",
+    "paper-public-association-v5-2d/train_fusion_base.py": "18192d31c075e024ffec028db8f153291d3cabef514d9fa8589c7fcb98e13a4a",
+    "paper-public-association-v5-2d/train_legacy.py": "cae8e3201e322f77b4318649563ac055727b542e687cdbfaeb6ade9b44cda3f0",
+    "paper-public-association-v5-2d/train_metric.py": "32ecc134a8b646762ddbc0b01eddeb6fff5a2b07b04e4daaed3db49d49b65475",
+    "paper-public-association-v5-2d/train_models.py": "3e21842db532ef0fb8a3ad49f928a28d19c6b46887a4c186a66a2d1290fcb4b0",
+    "paper-public-association-v5-2d/train_ngm.py": "d0bbd920dee0c9432eddf37511279e2a5e319b4ed601ed794ddc6f3d1179d444",
+    "paper-public-association-v5-2d/train_pca.py": "8ecc6353d44a017562d44a60271322ef8b08d4104657622dbe61376153353f57",
+    "paper-public-association-v5-2d/train_trees.py": "3c5a523754b670dc3a9a8987e5aec2d1bc32650556865c5718bd91dbe3df2721",
+    "paper-public-association-v5-2d/verify_fast_descriptors.py": "4206342e9cff0ae16401f3a33743acde0dbf041f68c0f52b5164e02e81e7c05f",
+    "paper-public-association-v5-2d/verify_legacy_batch.py": "b37c8f85cf998d24e4a4fb0b4ff0ad438cd248bd2796fa9aa0f79381fcac34ec",
+    "paper-public-association-v5-2d/verify_models.py": "29f8a10d093050596558dbb21945cc9afd958700ad1ce975b201a1655da93bca",
+    "paper-public-association-v5-2d/verify_ngm.py": "1f73cdf70b54f290311e342345992413f583856226d9bd8865c5e27452e3dbfd",
+    "paper-public-association-v6/export_development.py": "60a2d4a7754fca369a873b1b322ebf13d9e9f4bd754d1a9f7308c8228ca9648f",
+    "paper-public-association-v6/mixture_bridge.py": "e544817dabd36f17547ec6410ebf87a727abae16e8f450e00d04c0b1ef91fcac",
+    "paper-public-association-v6/repeat_mixture.py": "e7a0334ed9ef82f243dcbe018c8a31b4a455f950dfc93ec2b32f1ad1667d4a69",
+    "paper-public-association-v6/run_mixture.py": "30a60762eb1bef00c00579b31d56fcd34fb3192f40732416876cb3d345a93419",
+    "paper-public-association-v7/run_state.py": "e84fea993c8e0c36a6dda72fb31610441ed242c0dc7db8c11d288ea4ac4812b4",
+    "paper-public-association-v7/state_bridge.py": "436e6970fd6fa9336a33dc39f45049f2afd23dc195abeeb4f1731b9f7123c2d6",
+    "paper-public-association-v8/run_extended.py": "e470210c0da156381f9af85a426d11bc0a3e9b4854d018f5ca17d22ecf5ff204",
+    "paper-public-association-v8/run_repetitions.py": "70aeb09ea7b10e50823c4ff59ff78db27b40e4da67b3eef71c613ae6869381db",
+    "paper-public-association-v9/context_mixture.py": "c97956e8230cf8311ad27f6c35874d9b2e5324d9c3168744c6e01eac252cee2e",
+    "paper-public-association-v9/data.py": "72065f322bf47eb385cf449db5e3bd5aa02e26a2e59c1856810cf78d8e66b47f",
+    "paper-public-association-v9/refit_baselines.py": "e54426ac34aa172297c805b143c9a6d2d56d516823466fdea6647857a722a2cd",
+    "paper-public-association-v9/run.py": "93a9af37694ddef88c67335aa834425b93822635b4283ceaa55b7e76d670a591",
+    "paper-public-association/classical_public.py": "28bd18b230d1e9f1516b8568c6a1f8d8de4a71dfd52f48ee1cffc580f1ffea96",
+    "paper-public-association/data_protocol.py": "4add7ea203144ed92b17290d37c2b6aaa574d36f9b316790b9b4d08fdacc13c3",
+    "paper-public-association/develop.py": "310d6fe818e192f16397ebe2b2c63da031e5013ced4f7fef6eff53f1b54e0d72",
+    "paper-public-association/develop_neural.py": "b954acf73985904c08b68772a1bcd9e29b6f7ad39f21d7a13971ac59216125ee",
+    "paper-public-association/development_cases.py": "0c20343b71604e7cb19a73fe78014f9c57648cf8036de7f9b8c0ed01b0fc81c7",
+    "paper-public-association/diagnose_previous.py": "a884f9cae6ccf4e17ff2ba6738ece3178fc93b14b7d1299928eb30269d6cefe9",
+    "paper-public-association/learners.py": "6e058e9bd5d688bd1ffefe4bf0e1285770f724211ce55f3e8e96e8ad55c22604",
+    "paper-public-association/load_model.py": "e14ee55ca0c303320d475e2c67ac3639559b8dcdc874081c0719ccf44bc1d0c8",
+    "paper-public-association/metric_models.py": "fdb6e9bb861eaa8ec9d0b9ecf29c0aecfc12d1597a478cfe322d2e283519ee71",
+    "paper-public-association/prepare_escape.py": "83828b198d8721fc6bf00310906dc92ff7d803f4f22e170d60b75662e1946f85",
+    "paper-public-association/prepare_reserved.py": "1df49c99af48af5739dbec4d2d5b6175dd2a0057acc0c89b74a1be6f6f8b6b06",
+    "paper-public-association/prepare_train_extension.py": "549aa12a7ce57fed6a6f912f7eaf603e0a75b0829532bb2f3532dbec083428f3",
+    "paper-public-association/strong_geometry.py": "4bd9559b43cb9fdb86f6549ee54ccf8aacb925eb40de8e726654dd992f935227",
+    "paper-public-association/structured_development.py": "0bb50cfccb0bfad005c0a9dfad288d9d887702ad406031b3953d07768b839d87",
+    "paper-public-association/train_fusion.py": "8b61f827a08997e6396a3533a5c6aa1f706362745654b16dca4dd8d89b57df22",
+    "paper-public-association/train_metric.py": "b51fb548b17e6122c4427155fd541a2e9112ead7c4a38fcfe01255ff70331543",
+    "paper-public-association/train_models.py": "9bbdce0da7200f7fee93c15d39f175b7e6306dcaf4c6e2038783546935fa0208",
+    "paper-public-association/train_pca.py": "50d86cf8b3df7dace74abe73924e8f89d041e44218cbe30bb94ee954d93185cf",
+    "paper-public-association/train_trees.py": "6023d476caa95eaba1e4f8aa371e6b1cc9dacb73fa97904993a7ed6d1e77ee81",
+    "paper-public-association/verify_models.py": "3dd2c8ac818947506defccf6d57dfc4b11e01d2478326b6c838effeca63cbe2d",
+    "paper-public-confirmation/benchmark_cost.py": "8752749195adc433b4e258fd476281b09d738848800851a8d4e4c0a045ea387f",
+    "paper-public-confirmation/benchmark_trees.py": "236f3747fa6a5fb1f15233f0c138c08f6b6b7262fb582529ada949d15da59623",
+    "paper-public-confirmation/diagnose_source_shift.py": "9ca3161636343ab6d659ee630ec13309e88ba59ccd9c18229d8105da4fef130a",
+    "paper-public-confirmation/evaluate.py": "ad9af5759f26a37e55ebc715a4870e16953d1a090f164090556af5597a686291",
+    "paper-public-confirmation/export_replay.py": "e609f47a83a5d114e8599d84c7803ee44f98d0243c9118d5905815b9f01f86fc",
+    "paper-public-confirmation/freeze.py": "18fdfd4207fd5f89facf3ded9a612698adc534920b1f7a2553c3d08669bebde0",
+    "paper-public-confirmation/frozen-registry.json": "2d68cab7d5ab56a6895680cf825ae6562e11a91c22f5d30b80f32574477d8c05",
+    "paper-public-confirmation/supplement_metrics.py": "f309552633592b624c723bf6c5bd1bf84da0c79c01c14fc8fb76160694a65e7e",
+    "paper-public-coordinated-reserve/D1-reserved-manifest.json": "cfc9a35d9cb6ee8784abdafc83ff2af2bee55bd83a4cbe6a8a36eebe88959e8b",
+    "paper-public-coordinated-reserve/D2-reserved-manifest.json": "315f6904aa3b0251090661dd7e785c4fe9941b5199cda9fbd2ae235f07df74de",
+    "paper-public-extra-validation/prepare_extra_source.py": "7e8ab67b45202ca3414dd0f4c074db218739c04e1480cf2e8e2e043b60b2abe3",
+    "paper-public-extra-validation/reserved-manifest.json": "451bc65a7e3b2949de1764a9fd28ccb87c64de9fbdf15f1230a07f51853c0da9",
+    "paper-public-redevelopment/build_report.py": "2af0fda7b0af61c6f1ab7176287fffc83bf9ae468a4627d4029395af5bbe771c",
+    "paper-public-redevelopment/collect_results.py": "38df93e5f2586d8b31531d2db4ece6db2fc7ba382aff5cf398af13894d3b95fe",
+    "paper-public-redevelopment/verify_report.py": "18776f9d3a16c54a74f85c753b84fb4ccafb86930af7e1ca49e397c49c798fec"
+  },
+  "aggregation": "Mean within record then equal records within source and gap. Paired differences candidate minus baseline. Shared individuals limit inference.",
+  "seed_rule": "78000000+100*window_index+condition_index, in manifest order; gap,noise,turnover,clutter Cartesian product.",
+  "stop_rule": "Single frozen scoring pass. No tuning on these sources. Previously prepared trajectory references can contain source preprocessing prior to artificial gap masking."
+}
